@@ -1,0 +1,78 @@
+{
+  "shot_results": [
+    {
+      "code": "miss",
+      "label": "mimo branku"
+    },
+    {
+      "code": "on_goal",
+      "label": "na branku (chycená)"
+    },
+    {
+      "code": "post",
+      "label": "tyčka"
+    },
+    {
+      "code": "goal",
+      "label": "gól"
+    }
+  ],
+  "strengths": [
+    {
+      "code": "even",
+      "label": "vyrovnaný stav"
+    },
+    {
+      "code": "power_play",
+      "label": "přesilovka"
+    },
+    {
+      "code": "short_handed",
+      "label": "oslabení"
+    }
+  ],
+  "positions": [
+    {
+      "code": "G",
+      "label": "brankář"
+    },
+    {
+      "code": "D",
+      "label": "obránce"
+    },
+    {
+      "code": "F",
+      "label": "útočník"
+    }
+  ],
+  "formation_slots": [
+    {
+      "code": "lw",
+      "label": "levé křídlo"
+    },
+    {
+      "code": "c",
+      "label": "center"
+    },
+    {
+      "code": "rw",
+      "label": "pravé křídlo"
+    },
+    {
+      "code": "ld",
+      "label": "levý obránce"
+    },
+    {
+      "code": "rd",
+      "label": "pravý obránce"
+    }
+  ],
+  "rink": {
+    "width": 890,
+    "height": 501,
+    "center_x": 445,
+    "origin": "top_left",
+    "home_attacks": "right",
+    "note": "Souřadnice jsou v pixelech obrázku hřiště 890 × 501, počátek vlevo nahoře. Domácí útočí po celé utkání doprava (x ≥ 445), hosté doleva – bez ohledu na třetinu a na to, kde týmy v hale stojí. Výměnu stran řeší aplikace zobrazením."
+  }
+}

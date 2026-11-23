@@ -1,0 +1,11 @@
+.git
+.venv
+.env
+private
+tests
+.olc
+.olc-skills
+.pytest_cache
+**/__pycache__
+**/*.pyc
+**/*.sqlite*

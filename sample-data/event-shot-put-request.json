@@ -1,0 +1,13 @@
+{
+  "type": "shot",
+  "team": "home",
+  "period": 1,
+  "time": "10:21",
+  "x": 760,
+  "y": 332,
+  "result": "goal",
+  "strength": "even",
+  "shooter_id": 6,
+  "goalkeeper_id": 36,
+  "assist_id": 9
+}

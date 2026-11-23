@@ -1,0 +1,258 @@
+{
+  "competition": "Testovací liga",
+  "date": "2026-11-21",
+  "venue": "Testovací hala",
+  "home": {
+    "name": "FBC Domácí Test",
+    "short_name": "Domácí"
+  },
+  "away": {
+    "name": "SK Hosté Test",
+    "short_name": "Hosté"
+  },
+  "periods": {
+    "count": 3,
+    "length_min": 20,
+    "overtime_min": 5
+  },
+  "roster": {
+    "home": [
+      {
+        "jersey": 1,
+        "first_name": "DomG",
+        "last_name": "Jedna",
+        "position": "G",
+        "captain": false
+      },
+      {
+        "jersey": 30,
+        "first_name": "DomG",
+        "last_name": "Třicet",
+        "position": "G",
+        "captain": false
+      },
+      {
+        "jersey": 10,
+        "first_name": "Dom",
+        "last_name": "Hráč10",
+        "position": "F",
+        "captain": true
+      },
+      {
+        "jersey": 11,
+        "first_name": "Dom",
+        "last_name": "Hráč11",
+        "position": "F",
+        "captain": false
+      },
+      {
+        "jersey": 12,
+        "first_name": "Dom",
+        "last_name": "Hráč12",
+        "position": "F",
+        "captain": false
+      },
+      {
+        "jersey": 13,
+        "first_name": "Dom",
+        "last_name": "Hráč13",
+        "position": "D",
+        "captain": false
+      },
+      {
+        "jersey": 14,
+        "first_name": "Dom",
+        "last_name": "Hráč14",
+        "position": "D",
+        "captain": false
+      },
+      {
+        "jersey": 20,
+        "first_name": "Dom",
+        "last_name": "Hráč20",
+        "position": "F",
+        "captain": false
+      },
+      {
+        "jersey": 21,
+        "first_name": "Dom",
+        "last_name": "Hráč21",
+        "position": "F",
+        "captain": false
+      },
+      {
+        "jersey": 22,
+        "first_name": "Dom",
+        "last_name": "Hráč22",
+        "position": "F",
+        "captain": false
+      },
+      {
+        "jersey": 23,
+        "first_name": "Dom",
+        "last_name": "Hráč23",
+        "position": "D",
+        "captain": false
+      },
+      {
+        "jersey": 24,
+        "first_name": "Dom",
+        "last_name": "Hráč24",
+        "position": "D",
+        "captain": false
+      },
+      {
+        "jersey": 40,
+        "first_name": "Dom",
+        "last_name": "Hráč40",
+        "position": "F",
+        "captain": false
+      },
+      {
+        "jersey": 41,
+        "first_name": "Dom",
+        "last_name": "Hráč41",
+        "position": "D",
+        "captain": false
+      }
+    ],
+    "away": [
+      {
+        "jersey": 1,
+        "first_name": "HosG",
+        "last_name": "Jedna",
+        "position": "G",
+        "captain": false
+      },
+      {
+        "jersey": 30,
+        "first_name": "HosG",
+        "last_name": "Třicet",
+        "position": "G",
+        "captain": false
+      },
+      {
+        "jersey": 10,
+        "first_name": "Hos",
+        "last_name": "Hráč10",
+        "position": "F",
+        "captain": true
+      },
+      {
+        "jersey": 11,
+        "first_name": "Hos",
+        "last_name": "Hráč11",
+        "position": "F",
+        "captain": false
+      },
+      {
+        "jersey": 12,
+        "first_name": "Hos",
+        "last_name": "Hráč12",
+        "position": "F",
+        "captain": false
+      },
+      {
+        "jersey": 13,
+        "first_name": "Hos",
+        "last_name": "Hráč13",
+        "position": "D",
+        "captain": false
+      },
+      {
+        "jersey": 14,
+        "first_name": "Hos",
+        "last_name": "Hráč14",
+        "position": "D",
+        "captain": false
+      },
+      {
+        "jersey": 20,
+        "first_name": "Hos",
+        "last_name": "Hráč20",
+        "position": "F",
+        "captain": false
+      },
+      {
+        "jersey": 21,
+        "first_name": "Hos",
+        "last_name": "Hráč21",
+        "position": "F",
+        "captain": false
+      },
+      {
+        "jersey": 22,
+        "first_name": "Hos",
+        "last_name": "Hráč22",
+        "position": "F",
+        "captain": false
+      },
+      {
+        "jersey": 23,
+        "first_name": "Hos",
+        "last_name": "Hráč23",
+        "position": "D",
+        "captain": false
+      },
+      {
+        "jersey": 24,
+        "first_name": "Hos",
+        "last_name": "Hráč24",
+        "position": "D",
+        "captain": false
+      },
+      {
+        "jersey": 40,
+        "first_name": "Hos",
+        "last_name": "Hráč40",
+        "position": "F",
+        "captain": false
+      },
+      {
+        "jersey": 41,
+        "first_name": "Hos",
+        "last_name": "Hráč41",
+        "position": "D",
+        "captain": false
+      }
+    ]
+  },
+  "formations": {
+    "home": [
+      {
+        "line": 1,
+        "lw": 10,
+        "c": 11,
+        "rw": 12,
+        "ld": 13,
+        "rd": 14
+      },
+      {
+        "line": 2,
+        "lw": 20,
+        "c": 21,
+        "rw": 22,
+        "ld": 23,
+        "rd": null
+      }
+    ],
+    "away": [
+      {
+        "line": 1,
+        "lw": 10,
+        "c": 11,
+        "rw": 12,
+        "ld": 13,
+        "rd": 14
+      },
+      {
+        "line": 2,
+        "lw": 20,
+        "c": 21,
+        "rw": 22,
+        "ld": 23,
+        "rd": null
+      }
+    ]
+  }
+}

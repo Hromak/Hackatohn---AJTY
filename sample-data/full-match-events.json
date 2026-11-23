@@ -1,0 +1,3250 @@
+[
+  {
+    "client_id": "8d14d13c-afba-5989-915f-1ce47a77ff5d",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "00:00",
+      "players": [
+        23,
+        20,
+        22,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "3adaec81-7140-534f-9295-5a2a115f1a1f",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "00:00",
+      "players": [
+        15,
+        18,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "c957f3d4-f982-5d67-a9ba-b83095e8742a",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "00:51",
+      "x": 709,
+      "y": 340,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 15,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "8b163582-2869-5bf6-aac8-20602aedfd9d",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "00:55",
+      "x": 772,
+      "y": 296,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 2,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "f144af60-b791-5be6-a19a-1cb0c1a60056",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "01:00",
+      "players": [
+        33,
+        32,
+        24,
+        28,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "db43fefb-81b0-5a35-be98-8b2c4fd57f93",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "01:03",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        9
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "af11e0f2-592b-5559-9c2a-3737aa35f3b7",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "01:25",
+      "x": 692,
+      "y": 260,
+      "result": "on_goal",
+      "strength": "power_play",
+      "shooter_id": 3,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "b5da6e9f-60cb-5efb-919f-0a41f04059c2",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "01:52",
+      "x": 656,
+      "y": 361,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 14,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "549738ed-ea1f-53d7-bda8-a1240c54f00b",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "01:57",
+      "players": [
+        21,
+        34,
+        29,
+        35,
+        31
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "719ed4bb-0526-5faf-bff1-e343f5c8ebce",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "02:00",
+      "players": [
+        5,
+        17,
+        19,
+        16,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "c4ceefbe-fa54-5c42-a6f4-748de5f277d6",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "02:57",
+      "players": [
+        15,
+        18,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "e0721f39-562b-50b2-ab5a-9c88e099a5f9",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "02:59",
+      "players": [
+        23,
+        20,
+        22,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "fd313fb0-f411-5599-9611-9447bb7b1827",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 1,
+      "time": "03:38",
+      "x": 224,
+      "y": 174,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 20,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "4afd11d5-45f7-57ca-b4d1-cb73af44c1b3",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "03:40",
+      "players": [
+        33,
+        32,
+        24,
+        28,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "8561a8be-3972-57fc-94e3-0d9fbe09b4ac",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "03:40",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        9
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "5cffaf62-d12c-53df-8139-508e277a95e3",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "04:34",
+      "players": [
+        21,
+        34,
+        29,
+        35,
+        31
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "ed422247-1cb6-5e6f-9f13-610d5a4fc695",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "04:34",
+      "players": [
+        5,
+        17,
+        19,
+        16,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "9ef33508-b0c6-5da3-8b85-a8bac759ff3c",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "05:32",
+      "players": [
+        15,
+        18,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "5282b788-d6c5-5dac-825b-fc72b265b21f",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "05:33",
+      "players": [
+        23,
+        20,
+        22,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "5256d99a-1a9c-5ff3-b4cb-19b752832812",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "06:32",
+      "players": [
+        33,
+        32,
+        24,
+        28,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "c4ede569-80ea-5230-92cb-3b06771adccf",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "06:32",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        9
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "3539c1d4-084f-555e-82c7-d31a8dd1af4f",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "07:41",
+      "players": [
+        5,
+        17,
+        19,
+        16,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "bfb0a4c8-688f-51c3-8be3-213cc1ac27cf",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "07:42",
+      "players": [
+        21,
+        34,
+        29,
+        35,
+        31
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "a425dd95-8dce-5cb1-80d8-33521869fc01",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "07:58",
+      "x": 578,
+      "y": 255,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 11,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "1d920681-dbb2-558a-a8fe-c54442381a28",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "08:08",
+      "players": [
+        23,
+        20,
+        22,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "e935e25d-4745-57f3-abf8-04070ba7ed2b",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "08:38",
+      "players": [
+        15,
+        18,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "6ee5f6d3-525a-5d0a-9c48-358ae9c2bbdc",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "09:28",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        9
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "f956fdfe-ac26-5e43-9821-22cb6114344f",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "09:38",
+      "players": [
+        33,
+        32,
+        24,
+        28,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "35818b5a-3371-530e-a727-588591058b9f",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "09:55",
+      "x": 739,
+      "y": 331,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 9,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "a23d50bf-22e2-5d42-89b6-961a493223fd",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "10:21",
+      "players": [
+        21,
+        34,
+        29,
+        35,
+        31
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "a0d96ee0-d186-5817-be5b-fc6bc524d8b8",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "10:21",
+      "players": [
+        5,
+        17,
+        19,
+        16,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "b08776bb-d3c9-5f96-9038-6163f5f63916",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "10:21",
+      "x": 760,
+      "y": 332,
+      "result": "goal",
+      "strength": "even",
+      "shooter_id": 6,
+      "goalkeeper_id": 36,
+      "assist_id": 9
+    }
+  },
+  {
+    "client_id": "6c079830-b41d-50d2-9525-cf0a4e0fca4f",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 1,
+      "time": "11:35",
+      "x": 156,
+      "y": 276,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 21,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "dca2b7d8-3b35-56e0-9e76-92ff923e957a",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "11:39",
+      "players": [
+        23,
+        20,
+        22,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "f9f3b74b-1f64-55e2-9a80-d1852af6d241",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "11:39",
+      "players": [
+        15,
+        18,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "22b755a2-7ac9-508f-bf70-557241fc4758",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "12:32",
+      "players": [
+        33,
+        32,
+        24,
+        28,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "2a7ba473-57c5-5cc7-bb03-85eafcb43619",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "12:32",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        9
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "fc06edaf-cca7-531f-9fc1-1adc3424dfd2",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "13:16",
+      "players": [
+        21,
+        34,
+        29,
+        35,
+        31
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "771abb9b-553e-53e1-ac46-0a01a91330ed",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "13:16",
+      "players": [
+        5,
+        17,
+        19,
+        16,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "dd1c4ef1-db28-5203-982e-f1a2f2141692",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "14:14",
+      "players": [
+        23,
+        20,
+        22,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "18c0f1ce-b5da-570a-9d7a-ece6434f505f",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "14:14",
+      "players": [
+        15,
+        18,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "59537fb1-574c-51eb-aa63-5044ccefb170",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "14:14",
+      "x": 718,
+      "y": 272,
+      "result": "goal",
+      "strength": "even",
+      "shooter_id": 19,
+      "goalkeeper_id": 36,
+      "assist_id": 5
+    }
+  },
+  {
+    "client_id": "0851abb3-5960-5f9b-8515-35af97d82ebb",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 1,
+      "time": "14:58",
+      "x": 211,
+      "y": 245,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 29,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "579607be-da41-5419-9378-6eddd6d67042",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "15:00",
+      "players": [
+        33,
+        32,
+        24,
+        28,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "b05d53af-ebe6-597b-ae40-3c13778c97fe",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "15:00",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        9
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "b261016b-ecce-59f6-909d-865c21c7e3ff",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "15:48",
+      "x": 763,
+      "y": 247,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 10,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "4b8f91e3-e816-5f0b-b6b6-2024ac7008a7",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "15:51",
+      "players": [
+        21,
+        34,
+        29,
+        35,
+        31
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "8b7a7bf6-754c-5bca-8597-fd9e9f1ee0c6",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "15:51",
+      "players": [
+        5,
+        17,
+        19,
+        16,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "c2fbf839-f85e-59fc-8810-a43ac476b947",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 1,
+      "time": "16:57",
+      "x": 186,
+      "y": 147,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 21,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "08cffda0-6972-5339-bd63-65239f48a03b",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 1,
+      "time": "16:59",
+      "x": 118,
+      "y": 300,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 29,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "dffa2d50-fe89-5941-8813-95634d08c035",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "17:12",
+      "players": [
+        15,
+        18,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "440f11a9-7b41-5f9d-9b4a-f327b1026611",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "17:13",
+      "players": [
+        23,
+        20,
+        22,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "75de03a3-f253-5d16-b6da-bb6665b5107b",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 1,
+      "time": "17:35",
+      "x": 223,
+      "y": 113,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 20,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "96545150-210a-5164-970b-e1a17764d432",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "17:45",
+      "x": 711,
+      "y": 242,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 3,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "092ae809-74cf-5324-a49e-a3c4c68fa410",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "18:07",
+      "x": 698,
+      "y": 298,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 10,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "6e7f6142-2fa7-55d1-9233-43cfb5f0d918",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 1,
+      "time": "18:27",
+      "x": 303,
+      "y": 48,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 20,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "959054b1-d157-51a0-9894-aea783a525b1",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "18:45",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        9
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "32f21667-c061-5e06-9b19-fba8108c431e",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "18:48",
+      "players": [
+        33,
+        32,
+        24,
+        28,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "30c817f3-e9ff-5759-ad44-6cbd8da375d6",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 1,
+      "time": "19:08",
+      "x": 307,
+      "y": 410,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 33,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "b82772d5-6615-58e1-8976-f04e03268483",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 1,
+      "time": "19:14",
+      "players": [
+        1,
+        10,
+        15,
+        3,
+        7
+      ],
+      "strength": "power_play",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "0b868f25-3a02-5e27-874a-00583f72d845",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 1,
+      "time": "19:14",
+      "players": [
+        21,
+        32,
+        29,
+        31
+      ],
+      "strength": "short_handed",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "bb6bccce-a47f-50ee-895c-1ab82c8d0f97",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "19:55",
+      "x": 707,
+      "y": 379,
+      "result": "on_goal",
+      "strength": "power_play",
+      "shooter_id": 15,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "c353203b-7d6b-5680-a3c0-2a3fe2d4c631",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 1,
+      "time": "19:58",
+      "x": 773,
+      "y": 270,
+      "result": "on_goal",
+      "strength": "power_play",
+      "shooter_id": 1,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "968f1950-3f9f-5d9c-af0a-e432a0f8be6b",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "00:00",
+      "players": [
+        1,
+        10,
+        18,
+        3,
+        7
+      ],
+      "strength": "power_play",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "ee1aa673-2f26-53c6-a2b4-f1f523d55e74",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "00:00",
+      "players": [
+        25,
+        22,
+        30,
+        20
+      ],
+      "strength": "short_handed",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "40412510-1cbf-5305-93b4-f670810c77ff",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 2,
+      "time": "00:35",
+      "x": 760,
+      "y": 159,
+      "result": "on_goal",
+      "strength": "power_play",
+      "shooter_id": 10,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "0b021f58-891d-549d-a032-4b02c2e59f8a",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 2,
+      "time": "00:48",
+      "x": 714,
+      "y": 174,
+      "result": "on_goal",
+      "strength": "power_play",
+      "shooter_id": 10,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "1b722aba-ec22-51d7-abfb-84eea2b871c3",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "00:58",
+      "players": [
+        31,
+        32,
+        29,
+        35
+      ],
+      "strength": "short_handed",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "a5c13e6f-87f3-59fd-af6f-3ea6995c4101",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "01:11",
+      "players": [
+        15,
+        1,
+        10,
+        3,
+        7
+      ],
+      "strength": "power_play",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "5c3a3c49-4b53-5281-ab75-20a58f2be9c9",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "01:14",
+      "players": [
+        31,
+        32,
+        29,
+        35,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "664fb541-4700-5359-adeb-e9bd6e2909ef",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "01:43",
+      "players": [
+        5,
+        17,
+        19,
+        16,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "12d4b27c-53b4-515a-9874-68b65da15584",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "02:45",
+      "players": [
+        23,
+        20,
+        22,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "35e7815c-279b-5a2b-b9af-5277c931a2be",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "02:50",
+      "players": [
+        15,
+        18,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "120bee56-44cb-5c0f-a304-f523fa5a5ee2",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "04:21",
+      "players": [
+        15,
+        18,
+        1,
+        10,
+        7
+      ],
+      "strength": "power_play",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "15be0d93-2e81-5472-aef2-829d260b4a9c",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "04:21",
+      "players": [
+        31,
+        21,
+        32,
+        29
+      ],
+      "strength": "short_handed",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "65a96c30-0c80-572e-99e0-31519968f3a4",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "05:04",
+      "players": [
+        22,
+        30,
+        20,
+        27
+      ],
+      "strength": "short_handed",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "8309ce15-b6b8-5c08-8995-6354b9d15d7f",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "05:41",
+      "players": [
+        21,
+        29,
+        32,
+        31
+      ],
+      "strength": "short_handed",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "6dd14a24-1169-594d-907e-15647a3caac4",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "05:41",
+      "players": [
+        6,
+        17,
+        14,
+        2,
+        19
+      ],
+      "strength": "power_play",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "dad41edf-4611-5a29-a3f2-0fb720873bce",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "05:55",
+      "players": [
+        15,
+        7,
+        3,
+        1,
+        10
+      ],
+      "strength": "power_play",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "5219da31-bb5b-5835-a108-9db1124b070a",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 2,
+      "time": "06:04",
+      "x": 773,
+      "y": 188,
+      "result": "on_goal",
+      "strength": "power_play",
+      "shooter_id": 10,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "cb5959bb-84c9-546d-8008-d7d7cc5c05f8",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "06:21",
+      "players": [
+        23,
+        20,
+        22,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "0539beaf-4705-52c7-a5b7-fceb8953e431",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "06:21",
+      "players": [
+        5,
+        17,
+        19,
+        16,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "2e29ac3d-191e-5ee1-8a63-05e1c0134bb6",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 2,
+      "time": "06:21",
+      "x": 743,
+      "y": 233,
+      "result": "goal",
+      "strength": "power_play",
+      "shooter_id": 10,
+      "goalkeeper_id": 36,
+      "assist_id": 3
+    }
+  },
+  {
+    "client_id": "44ef2b6d-dde1-5813-a9c6-5e02694daa10",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "06:39",
+      "players": [
+        33,
+        32,
+        24,
+        28,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "08f0f6fa-cdfc-5e96-a9bb-cfdf77a341dd",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "06:39",
+      "players": [
+        15,
+        18,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "1e11c928-dff5-5eea-9ff1-ab73206ea6dd",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 2,
+      "time": "06:39",
+      "x": 149,
+      "y": 265,
+      "result": "goal",
+      "strength": "even",
+      "shooter_id": 23,
+      "goalkeeper_id": 12,
+      "assist_id": 28
+    }
+  },
+  {
+    "client_id": "5717194c-15c4-5885-b6bc-222bac42dccd",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "08:20",
+      "players": [
+        21,
+        34,
+        29,
+        35,
+        31
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "f29bcd32-0869-5f24-8193-06a921422a48",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "08:23",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        9
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "6cd8255b-2e34-5bec-9b82-8745f610c95b",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 2,
+      "time": "09:07",
+      "x": 695,
+      "y": 212,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 1,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "623f30e9-52bd-567a-a275-e12b261efcdb",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "09:31",
+      "players": [
+        33,
+        32,
+        24,
+        28,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "d79eeaec-b58c-53a4-81a6-6368e3deae84",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "09:31",
+      "players": [
+        5,
+        17,
+        19,
+        16,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "00fbce09-8176-584d-8d0d-ba3ae7b77d8e",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "10:22",
+      "players": [
+        15,
+        18,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "2e535875-5460-570f-aa40-e325e564c68c",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "10:22",
+      "players": [
+        23,
+        20,
+        22,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "48099a08-4ddd-57f0-a627-13407363b373",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 2,
+      "time": "11:05",
+      "x": 694,
+      "y": 256,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 2,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "870f9918-ffd0-5e24-9c8a-8b57e34d5ad0",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "11:14",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        9
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "f7ba801c-94fd-5c58-85d1-69b080235085",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "11:46",
+      "players": [
+        34,
+        27,
+        29,
+        28,
+        31
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "4f79194a-4ff0-5f22-9422-9dbec8366ae6",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 2,
+      "time": "12:28",
+      "x": 714,
+      "y": 251,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 14,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "85fec6f9-6608-5e8c-a4e7-5e6685f64e1d",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 2,
+      "time": "12:43",
+      "x": 279,
+      "y": 244,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 31,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "ea2ce099-4ebd-594f-b6db-988004cbe8cb",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "13:01",
+      "players": [
+        21,
+        32,
+        24,
+        25,
+        30
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "0d870c13-2675-5048-9a0f-a4d3a7e5c6ec",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "13:08",
+      "players": [
+        5,
+        17,
+        19,
+        16,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "dae2377f-a3fa-5197-9413-aaaf5a1a8ec8",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "14:20",
+      "players": [
+        15,
+        18,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "51ba6f55-8546-59a0-98ce-4eb883052553",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "14:20",
+      "players": [
+        23,
+        22,
+        28,
+        20,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "66097646-ff66-5216-9fd8-c41b5133c06f",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 2,
+      "time": "14:40",
+      "x": 638,
+      "y": 394,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 18,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "b3e82883-7839-554f-a1a4-a6321cc6397d",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 2,
+      "time": "14:54",
+      "x": 307,
+      "y": 338,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 20,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "77390907-1a6b-5341-879b-0735018272f1",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "14:58",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        9
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "3d6295e1-6378-5dbe-8c3c-4c1c005081fb",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "14:58",
+      "players": [
+        29,
+        34,
+        31,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "6d590630-1650-5e1d-9790-dff2e6906891",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 2,
+      "time": "15:18",
+      "x": 130,
+      "y": 301,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 34,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "cdad000d-fd93-53dd-afa1-0ecc184780e3",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 2,
+      "time": "15:22",
+      "x": 741,
+      "y": 318,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 14,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "cd0b5a21-8da3-5214-94f4-133af23071fe",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "15:51",
+      "players": [
+        21,
+        28,
+        32,
+        27,
+        24
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "3e228d00-fe91-5c19-88a2-d89ad400e3be",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 2,
+      "time": "15:53",
+      "x": 753,
+      "y": 202,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 9,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "79c0da06-4ed1-5e43-a5eb-6acfb553a843",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "15:55",
+      "players": [
+        15,
+        18,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "0cecbabd-e52d-534a-a045-a29831f7090e",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "17:02",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        9
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "fd58ffe5-2f23-5209-bfd0-75984d4f43d6",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "17:02",
+      "players": [
+        25,
+        30,
+        23,
+        22,
+        20
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "df26141d-6ef4-571a-944e-83bca1460691",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 2,
+      "time": "17:37",
+      "x": 257,
+      "y": 394,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 20,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "3fd5fd43-cb33-5478-a2b9-97eb8b7f3a94",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "18:17",
+      "players": [
+        15,
+        17,
+        3,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "0ad8fa17-c83e-5cbb-9b8b-78e41d604d63",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "18:17",
+      "players": [
+        34,
+        31,
+        29,
+        27,
+        28
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "619d37a8-c2a5-58d1-bd3e-9feb66194534",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 2,
+      "time": "18:17",
+      "x": 182,
+      "y": 220,
+      "result": "goal",
+      "strength": "even",
+      "shooter_id": 29,
+      "goalkeeper_id": 12,
+      "assist_id": 20
+    }
+  },
+  {
+    "client_id": "7f7231f9-7c98-592b-96ce-c3654577d446",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 2,
+      "time": "19:14",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        9
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "bc0ebf80-fb29-5e6f-bbe0-36a07a68be32",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 2,
+      "time": "19:14",
+      "players": [
+        30,
+        21,
+        25,
+        24,
+        32
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "1a91fd14-a5ec-5b6f-a73c-74f21b1e066f",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 2,
+      "time": "19:52",
+      "x": 749,
+      "y": 270,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 1,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "6ea4ea7e-38d1-58e5-b82c-6a49f01c66a7",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "00:00",
+      "players": [
+        23,
+        20,
+        22,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "f1522be7-a963-554e-b39f-ffb1db6e5dca",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "00:00",
+      "players": [
+        15,
+        17,
+        19,
+        7,
+        2
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "888ab9b2-8809-54f3-876a-cb5a269cc935",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "00:46",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "b194abc1-ba15-564c-b7a9-aac442669e3c",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "00:46",
+      "players": [
+        21,
+        32,
+        24,
+        28,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "4c50d6b2-4707-5bea-8c25-acaf4de2a8f1",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "01:39",
+      "players": [
+        34,
+        31,
+        25,
+        30,
+        29
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "d655180e-9571-5787-8f86-1590558126a6",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "01:40",
+      "players": [
+        15,
+        17,
+        19,
+        7,
+        2
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "ec4831b1-46ae-5dae-ad1d-ee8490e0f008",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "02:01",
+      "x": 726,
+      "y": 230,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 7,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "4f951b5a-2488-5b82-8894-7da75a75904a",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "02:22",
+      "x": 755,
+      "y": 208,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 19,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "d3ba504a-e538-55e6-b166-e5eb8bcc2d15",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "02:42",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "c0fb529e-bbd9-5c37-8106-1e74f3ad0e4d",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "02:43",
+      "players": [
+        27,
+        28,
+        20,
+        22,
+        23
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "b5aa7bfa-a0e1-580a-bb53-8eae78c8a173",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "03:38",
+      "players": [
+        15,
+        17,
+        19,
+        7,
+        2
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "63891776-56af-582d-a81c-f7d313067411",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "03:38",
+      "players": [
+        32,
+        24,
+        25,
+        21,
+        30
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "533032bc-3d6e-5861-ac0a-9dc667062846",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 3,
+      "time": "04:21",
+      "x": 249,
+      "y": 223,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 24,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "1a4f75ef-861a-5f31-9aa6-b0e62bbbffc3",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "04:45",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "ef3478f2-9b5d-5817-96c6-027433a49c0f",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "04:45",
+      "players": [
+        31,
+        29,
+        28,
+        27,
+        34
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "eba70fc4-d725-5784-8dbb-afcfa9a9e29d",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "05:33",
+      "players": [
+        15,
+        17,
+        19,
+        7,
+        2
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "427f1a22-f1ae-5628-bd48-ced397452ad2",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "05:33",
+      "players": [
+        20,
+        22,
+        23,
+        30,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "8ec2fe57-784d-5f87-b41b-117be832a503",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "05:55",
+      "x": 705,
+      "y": 149,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 17,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "1a4f47d1-287c-51c1-afe8-0c61c58b9de2",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "05:59",
+      "x": 667,
+      "y": 329,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 7,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "c7b8b613-3ef3-5837-9c5b-8ca5173d84eb",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "06:23",
+      "players": [
+        32,
+        24,
+        21,
+        28,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "8479ab81-11f6-5fbd-b3a0-0cc54df99191",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "06:25",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "9aedf8d6-1ae9-50d9-ba55-aa770c2a2ff1",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "07:21",
+      "players": [
+        25,
+        29,
+        31,
+        30,
+        34
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "c798e817-b856-5212-a135-33d341595e36",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "07:35",
+      "players": [
+        15,
+        17,
+        19,
+        7,
+        2
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "55be89f2-576d-5bad-8dce-fdc863dd47d6",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "07:45",
+      "x": 643,
+      "y": 234,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 17,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "2241f9aa-2587-5e70-a87d-20a66e2d002a",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "08:08",
+      "x": 653,
+      "y": 194,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 7,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "e0dcca95-8337-597d-a885-f6d81d4c8ce8",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "08:22",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "6cde79d8-26d1-5c88-a073-53ce14d1a671",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "08:25",
+      "players": [
+        22,
+        23,
+        20,
+        28,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "397883e2-fd8d-54e8-8dc7-1a5c32560a08",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "09:08",
+      "players": [
+        15,
+        17,
+        19,
+        7,
+        2
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "52bf7fab-208c-5a25-a490-83cbb32a5c53",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "09:08",
+      "players": [
+        24,
+        25,
+        32,
+        30,
+        21
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "f94bc296-d6b2-50e5-98c2-f09a1642bdb0",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "09:08",
+      "x": 725,
+      "y": 195,
+      "result": "goal",
+      "strength": "even",
+      "shooter_id": 1,
+      "goalkeeper_id": 36,
+      "assist_id": 14
+    }
+  },
+  {
+    "client_id": "c58a7b5d-6ef5-542f-a5f4-ba97a066a067",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "10:11",
+      "players": [
+        14,
+        1,
+        10,
+        6,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "93757ac6-e038-518d-aa22-22630045a769",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "10:11",
+      "players": [
+        28,
+        31,
+        27,
+        29,
+        34
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "bce34e92-2791-57ff-aaf0-c86396da1b4b",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "10:42",
+      "x": 725,
+      "y": 271,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 11,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "ec9120f0-6f46-5de4-a88f-5c9195a78ae2",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "11:18",
+      "players": [
+        30,
+        22,
+        20,
+        27
+      ],
+      "strength": "short_handed",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "90a4b405-667e-59dc-8345-afc5e1ea26f1",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "11:18",
+      "players": [
+        3,
+        1,
+        10,
+        15,
+        7
+      ],
+      "strength": "power_play",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "5d213b08-9166-57d3-a63e-6f3636e80247",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "11:39",
+      "x": 724,
+      "y": 251,
+      "result": "on_goal",
+      "strength": "power_play",
+      "shooter_id": 10,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "81deb2de-ec45-5bc2-aae6-a18c4a159643",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "11:57",
+      "x": 767,
+      "y": 268,
+      "result": "on_goal",
+      "strength": "power_play",
+      "shooter_id": 10,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "62e297d2-a52b-50aa-b869-76199c253364",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "12:13",
+      "players": [
+        31,
+        32,
+        21,
+        24
+      ],
+      "strength": "short_handed",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "802c7c35-7be5-54a9-9a5a-0c2e6e7222fd",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "12:13",
+      "players": [
+        1,
+        10,
+        15,
+        6,
+        2
+      ],
+      "strength": "power_play",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "64845918-5db6-5970-94e8-35670f5c4575",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "12:32",
+      "players": [
+        3,
+        1,
+        10,
+        15,
+        7
+      ],
+      "strength": "power_play",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "235fa492-7192-5741-916c-d8839ae847af",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "12:42",
+      "x": 791,
+      "y": 216,
+      "result": "on_goal",
+      "strength": "power_play",
+      "shooter_id": 10,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "5a49651c-1944-5550-9210-923195e4e413",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "13:05",
+      "x": 784,
+      "y": 240,
+      "result": "on_goal",
+      "strength": "power_play",
+      "shooter_id": 1,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "b6af44e7-ec9a-5df8-80d2-0a23f0eee8d5",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "13:18",
+      "players": [
+        31,
+        32,
+        21,
+        24,
+        29
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "d0eadef7-aea2-5cca-8afd-e3a62f96f94b",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "13:23",
+      "players": [
+        22,
+        20,
+        30,
+        23,
+        25
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "e42df337-58e0-50d3-bd2f-e220aeb1c450",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "13:26",
+      "players": [
+        16,
+        11,
+        17,
+        6,
+        19
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "37b18fb2-03ca-5429-827f-6fb511212b5f",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "14:11",
+      "players": [
+        14,
+        1,
+        10,
+        7,
+        2
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "f82e0023-a452-55a1-b54b-c3b22791844a",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "14:11",
+      "players": [
+        24,
+        21,
+        27,
+        32,
+        31
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "2f14ca19-3eb0-5606-a190-0921a513a82c",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "15:01",
+      "players": [
+        15,
+        17,
+        19,
+        11,
+        6
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "10e61845-eee3-57df-aca9-e486f95ef083",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "15:30",
+      "players": [
+        24,
+        21,
+        27,
+        32,
+        31,
+        30
+      ],
+      "strength": "even",
+      "empty_net": true
+    }
+  },
+  {
+    "client_id": "5bddcde1-ad54-5bd1-af27-283af7d07a6f",
+    "body": {
+      "type": "shot",
+      "team": "away",
+      "period": 3,
+      "time": "15:33",
+      "x": 208,
+      "y": 267,
+      "result": "on_goal",
+      "strength": "even",
+      "shooter_id": 20,
+      "goalkeeper_id": 12,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "d5034989-94b2-5324-8a14-d9cc15ad3629",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "15:42",
+      "players": [
+        21,
+        29,
+        22,
+        31,
+        27
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "630149bd-5285-56df-8e0d-a798dbac65c0",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "15:48",
+      "players": [
+        15,
+        1,
+        10,
+        7,
+        2
+      ],
+      "strength": "power_play",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "1ea13e59-e575-5a0b-9e21-3b39f0a61087",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "15:48",
+      "players": [
+        22,
+        27,
+        20,
+        30
+      ],
+      "strength": "short_handed",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "d8e19dd1-4b0c-5b6a-9c64-9b7cc5f8d0f1",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "16:27",
+      "x": 786,
+      "y": 182,
+      "result": "on_goal",
+      "strength": "power_play",
+      "shooter_id": 1,
+      "goalkeeper_id": 36,
+      "assist_id": null
+    }
+  },
+  {
+    "client_id": "61a60e2e-b00b-5b42-be02-75343814573e",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "16:45",
+      "players": [
+        14,
+        19,
+        11,
+        6,
+        17
+      ],
+      "strength": "power_play",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "46533686-3802-54ef-b7e8-f506bd366cb7",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "16:45",
+      "players": [
+        24,
+        21,
+        31,
+        32
+      ],
+      "strength": "short_handed",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "7f5e3e99-a63c-59f6-8cb3-b7161fe54057",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "16:59",
+      "players": [
+        15,
+        1,
+        10,
+        2,
+        7
+      ],
+      "strength": "power_play",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "6a55dbae-a36b-5c20-bc21-c3a2306bb32b",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "17:42",
+      "players": [
+        22,
+        27,
+        31,
+        21,
+        29
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "996edc95-3aa3-527f-97d5-9fedb65327a3",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "17:42",
+      "players": [
+        14,
+        17,
+        19,
+        6,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "6fc9b054-a79e-5d25-809e-4c900a37d058",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "17:42",
+      "x": 698,
+      "y": 269,
+      "result": "goal",
+      "strength": "power_play",
+      "shooter_id": 7,
+      "goalkeeper_id": 36,
+      "assist_id": 15
+    }
+  },
+  {
+    "client_id": "28b57c15-267a-57d6-a0ea-520904f14bba",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "18:19",
+      "players": [
+        15,
+        1,
+        10,
+        2,
+        7
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "7a9bf342-fdab-581f-8e16-4d1884817c8b",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "18:19",
+      "players": [
+        30,
+        32,
+        20,
+        23,
+        24
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "119a95eb-d89b-5de3-9370-39f6dab7ee01",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "18:40",
+      "players": [
+        30,
+        32,
+        20,
+        23,
+        24,
+        25
+      ],
+      "strength": "even",
+      "empty_net": true
+    }
+  },
+  {
+    "client_id": "3e5f9c19-90fa-57b9-96e4-06ed5328da17",
+    "body": {
+      "type": "substitution",
+      "team": "home",
+      "period": 3,
+      "time": "19:02",
+      "players": [
+        14,
+        17,
+        19,
+        6,
+        11
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "9374b834-5b1a-5369-8f97-9d9013d506ac",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "19:02",
+      "players": [
+        29,
+        27,
+        22,
+        21,
+        31
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  },
+  {
+    "client_id": "910c5932-b763-57fa-9787-aec91a939b6f",
+    "body": {
+      "type": "shot",
+      "team": "home",
+      "period": 3,
+      "time": "19:02",
+      "x": 618,
+      "y": 253,
+      "result": "goal",
+      "strength": "even",
+      "shooter_id": 1,
+      "goalkeeper_id": null,
+      "assist_id": 15
+    }
+  },
+  {
+    "client_id": "9c797ff3-ac35-5d4f-9a5e-8582a2e31118",
+    "body": {
+      "type": "substitution",
+      "team": "away",
+      "period": 3,
+      "time": "19:46",
+      "players": [
+        22,
+        29,
+        21,
+        30,
+        31
+      ],
+      "strength": "even",
+      "empty_net": false
+    }
+  }
+]

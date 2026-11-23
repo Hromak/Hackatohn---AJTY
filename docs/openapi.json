@@ -1,0 +1,2370 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Zapisovatel API",
+    "description": "\nData pro tabletovou aplikaci zapisovatele florbalového utkání a sběr toho, co zapsala.\n\nToken posílejte v hlavičce `Authorization: Bearer <token>`. Průvodce je v README repozitáře.\n",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/v1/me": {
+      "get": {
+        "tags": [
+          "tým"
+        ],
+        "summary": "Kdo jsem a jaká mám utkání",
+        "operationId": "getMe",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MeOut"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Chybí nebo neplatí token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Překročen limit požadavků (rate_limited, too_many_concurrent_requests). Hlavička Retry-After říká, za kolik sekund to zkusit znovu.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Služba je pro tým dočasně nedostupná.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/me/error-mode": {
+      "put": {
+        "tags": [
+          "tým"
+        ],
+        "summary": "Vyzkoušet si chování aplikace při chybě API",
+        "description": "Zapne režim, ve kterém služba zápisy odmítá nebo neodpovídá. Aplikace si na něm ověří,\nže zapisovateli chybu ukáže a o nic nepřijde. Přepínač funguje i při zapnutém režimu.",
+        "operationId": "setMyErrorMode",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ErrorModeIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorModeOut"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Chybí nebo neplatí token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Překročen limit požadavků (rate_limited, too_many_concurrent_requests). Hlavička Retry-After říká, za kolik sekund to zkusit znovu.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Služba je pro tým dočasně nedostupná.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Požadavek má neplatný tvar.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/codebooks": {
+      "get": {
+        "tags": [
+          "číselníky"
+        ],
+        "summary": "Číselníky a hřiště",
+        "operationId": "getCodebooks",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodebooksOut"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Chybí nebo neplatí token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Překročen limit požadavků (rate_limited, too_many_concurrent_requests). Hlavička Retry-After říká, za kolik sekund to zkusit znovu.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Služba je pro tým dočasně nedostupná.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/matches": {
+      "get": {
+        "tags": [
+          "utkání"
+        ],
+        "summary": "Moje utkání",
+        "operationId": "listMatches",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchesOut"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Chybí nebo neplatí token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Překročen limit požadavků (rate_limited, too_many_concurrent_requests). Hlavička Retry-After říká, za kolik sekund to zkusit znovu.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Služba je pro tým dočasně nedostupná.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/matches/{match_id}": {
+      "get": {
+        "tags": [
+          "utkání"
+        ],
+        "summary": "Hlavička utkání a hrací části",
+        "operationId": "getMatch",
+        "parameters": [
+          {
+            "name": "match_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "maximum": 2147483647,
+              "minimum": 1,
+              "description": "Id utkání z `/me`.",
+              "title": "Match Id"
+            },
+            "description": "Id utkání z `/me`."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchOut"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Chybí nebo neplatí token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Překročen limit požadavků (rate_limited, too_many_concurrent_requests). Hlavička Retry-After říká, za kolik sekund to zkusit znovu.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Služba je pro tým dočasně nedostupná.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Neznámé utkání.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Požadavek má neplatný tvar.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/matches/{match_id}/roster": {
+      "get": {
+        "tags": [
+          "utkání"
+        ],
+        "summary": "Soupisky obou týmů",
+        "operationId": "getRoster",
+        "parameters": [
+          {
+            "name": "match_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "maximum": 2147483647,
+              "minimum": 1,
+              "description": "Id utkání z `/me`.",
+              "title": "Match Id"
+            },
+            "description": "Id utkání z `/me`."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RosterOut"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Chybí nebo neplatí token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Překročen limit požadavků (rate_limited, too_many_concurrent_requests). Hlavička Retry-After říká, za kolik sekund to zkusit znovu.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Služba je pro tým dočasně nedostupná.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Neznámé utkání.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Požadavek má neplatný tvar.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/matches/{match_id}/formations": {
+      "get": {
+        "tags": [
+          "utkání"
+        ],
+        "summary": "Předvolby formací (řady)",
+        "operationId": "getFormations",
+        "parameters": [
+          {
+            "name": "match_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "maximum": 2147483647,
+              "minimum": 1,
+              "description": "Id utkání z `/me`.",
+              "title": "Match Id"
+            },
+            "description": "Id utkání z `/me`."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormationsOut"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Chybí nebo neplatí token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Překročen limit požadavků (rate_limited, too_many_concurrent_requests). Hlavička Retry-After říká, za kolik sekund to zkusit znovu.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Služba je pro tým dočasně nedostupná.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Neznámé utkání.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Požadavek má neplatný tvar.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/matches/{match_id}/events": {
+      "get": {
+        "tags": [
+          "události"
+        ],
+        "summary": "Události utkání",
+        "operationId": "listEvents",
+        "parameters": [
+          {
+            "name": "match_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "maximum": 2147483647,
+              "minimum": 1,
+              "description": "Id utkání z `/me`.",
+              "title": "Match Id"
+            },
+            "description": "Id utkání z `/me`."
+          },
+          {
+            "name": "include_deleted",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "description": "Vrátit i smazané události.",
+              "default": false,
+              "title": "Include Deleted"
+            },
+            "description": "Vrátit i smazané události."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventsOut"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Chybí nebo neplatí token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Překročen limit požadavků (rate_limited, too_many_concurrent_requests). Hlavička Retry-After říká, za kolik sekund to zkusit znovu.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Služba je pro tým dočasně nedostupná.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Neznámé utkání.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Požadavek má neplatný tvar.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/matches/{match_id}/events/{client_id}": {
+      "get": {
+        "tags": [
+          "události"
+        ],
+        "summary": "Jedna událost",
+        "operationId": "getEvent",
+        "parameters": [
+          {
+            "name": "client_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Client Id"
+            }
+          },
+          {
+            "name": "match_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "maximum": 2147483647,
+              "minimum": 1,
+              "description": "Id utkání z `/me`.",
+              "title": "Match Id"
+            },
+            "description": "Id utkání z `/me`."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventOneOut"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Chybí nebo neplatí token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Překročen limit požadavků (rate_limited, too_many_concurrent_requests). Hlavička Retry-After říká, za kolik sekund to zkusit znovu.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Služba je pro tým dočasně nedostupná.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Neznámé utkání.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Neplatná událost nebo neplatné client_id.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "události"
+        ],
+        "summary": "Zapsat nebo opravit událost",
+        "description": "Jedna operace pro vytvoření i opravu. `client_id` je UUID, které si klient vygeneruje sám.\n\nPrvní doručení událost vytvoří (201). Další doručení se stejným `client_id` ji upraví (200).\nKdyž je tělo shodné s uloženým stavem, nic se nezmění a odpověď má `unchanged: true` –\nfrontu po výpadku proto jde poslat znovu bez obav z duplicit.",
+        "operationId": "putEvent",
+        "parameters": [
+          {
+            "name": "client_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Client Id"
+            }
+          },
+          {
+            "name": "match_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "maximum": 2147483647,
+              "minimum": 1,
+              "description": "Id utkání z `/me`.",
+              "title": "Match Id"
+            },
+            "description": "Id utkání z `/me`."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Událost upravena, nebo beze změny (`unchanged: true`).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PutEventOut"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Chybí nebo neplatí token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Překročen limit požadavků (rate_limited, too_many_concurrent_requests). Hlavička Retry-After říká, za kolik sekund to zkusit znovu.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Služba je pro tým dočasně nedostupná.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Neznámé utkání.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Neplatná událost nebo neplatné client_id.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Tělo není JSON objekt.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Konflikt: version_conflict (v odpovědi je aktuální stav události) nebo duplicate_time.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConflictOut"
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Událost byla smazána.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Tělo je větší než 16 kB.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Událost vznikla.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PutEventOut"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/ShotIn"
+                  },
+                  {
+                    "$ref": "#/components/schemas/SubstitutionIn"
+                  }
+                ],
+                "discriminator": {
+                  "propertyName": "type",
+                  "mapping": {
+                    "shot": "#/components/schemas/ShotIn",
+                    "substitution": "#/components/schemas/SubstitutionIn"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "události"
+        ],
+        "summary": "Smazat událost",
+        "description": "Smazání je konečné: další `PUT` na stejné `client_id` vrátí 410. Opakované smazání je 204.",
+        "operationId": "deleteEvent",
+        "parameters": [
+          {
+            "name": "client_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Client Id"
+            }
+          },
+          {
+            "name": "match_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "maximum": 2147483647,
+              "minimum": 1,
+              "description": "Id utkání z `/me`.",
+              "title": "Match Id"
+            },
+            "description": "Id utkání z `/me`."
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "401": {
+            "description": "Chybí nebo neplatí token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Překročen limit požadavků (rate_limited, too_many_concurrent_requests). Hlavička Retry-After říká, za kolik sekund to zkusit znovu.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Služba je pro tým dočasně nedostupná.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Neznámé utkání.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Neplatná událost nebo neplatné client_id.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Tělo je větší než 16 kB.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/matches/{match_id}/reset": {
+      "post": {
+        "tags": [
+          "události"
+        ],
+        "summary": "Vyprázdnit utkání",
+        "description": "Smaže všechny události utkání včetně smazaných, takže jejich `client_id` jdou použít znovu.",
+        "operationId": "resetMatch",
+        "parameters": [
+          {
+            "name": "match_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "maximum": 2147483647,
+              "minimum": 1,
+              "description": "Id utkání z `/me`.",
+              "title": "Match Id"
+            },
+            "description": "Id utkání z `/me`."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResetOut"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Chybí nebo neplatí token.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Překročen limit požadavků (rate_limited, too_many_concurrent_requests). Hlavička Retry-After říká, za kolik sekund to zkusit znovu.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Služba je pro tým dočasně nedostupná.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Neznámé utkání.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Tělo je větší než 16 kB.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Požadavek má neplatný tvar.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/health": {
+      "get": {
+        "tags": [
+          "služba"
+        ],
+        "summary": "Je služba naživu?",
+        "operationId": "getHealth",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Gethealth"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ClubOut": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "short_name": {
+            "type": "string",
+            "title": "Short Name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "short_name"
+        ],
+        "title": "ClubOut"
+      },
+      "CodeLabel": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "label"
+        ],
+        "title": "CodeLabel"
+      },
+      "CodebooksOut": {
+        "properties": {
+          "shot_results": {
+            "items": {
+              "$ref": "#/components/schemas/CodeLabel"
+            },
+            "type": "array",
+            "title": "Shot Results"
+          },
+          "strengths": {
+            "items": {
+              "$ref": "#/components/schemas/CodeLabel"
+            },
+            "type": "array",
+            "title": "Strengths"
+          },
+          "positions": {
+            "items": {
+              "$ref": "#/components/schemas/CodeLabel"
+            },
+            "type": "array",
+            "title": "Positions"
+          },
+          "formation_slots": {
+            "items": {
+              "$ref": "#/components/schemas/CodeLabel"
+            },
+            "type": "array",
+            "title": "Formation Slots"
+          },
+          "rink": {
+            "$ref": "#/components/schemas/RinkOut"
+          }
+        },
+        "type": "object",
+        "required": [
+          "shot_results",
+          "strengths",
+          "positions",
+          "formation_slots",
+          "rink"
+        ],
+        "title": "CodebooksOut"
+      },
+      "ConflictOut": {
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ErrorDetail"
+          },
+          "event": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ShotOut"
+              },
+              {
+                "$ref": "#/components/schemas/SubstitutionOut"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Event",
+            "description": "Aktuální uložený stav události (jen u version_conflict)."
+          }
+        },
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "title": "ConflictOut",
+        "description": "Chyba 409. U `version_conflict` nese i aktuální stav události."
+      },
+      "ErrorDetail": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code",
+            "description": "Stabilní strojový kód chyby. Všechny kódy jsou v `examples` a v README.",
+            "examples": [
+              "invalid_json",
+              "unauthorized",
+              "not_found",
+              "unknown_event",
+              "method_not_allowed",
+              "version_conflict",
+              "duplicate_time",
+              "deleted",
+              "payload_too_large",
+              "validation_error",
+              "invalid_client_id",
+              "invalid_period",
+              "invalid_time",
+              "time_out_of_period",
+              "unknown_player",
+              "wrong_team",
+              "not_goalkeeper",
+              "assist_is_shooter",
+              "goal_fields_on_non_goal",
+              "out_of_rink",
+              "too_few_players",
+              "too_many_players",
+              "empty_net_required",
+              "duplicate_player",
+              "goalkeeper_in_line",
+              "type_change",
+              "event_limit",
+              "forced_rejection",
+              "rate_limited",
+              "too_many_concurrent_requests",
+              "forced_unavailable",
+              "internal_error"
+            ]
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "description": "Česká věta pro člověka."
+          },
+          "fields": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fields",
+            "description": "Která pole jsou špatně (jen u chyb validace)."
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ErrorDetail"
+      },
+      "ErrorModeIn": {
+        "properties": {
+          "mode": {
+            "type": "string",
+            "enum": [
+              "off",
+              "reject",
+              "unavailable"
+            ],
+            "title": "Mode",
+            "description": "off = běžný provoz; reject = každý zápis vrací 422 forced_rejection; unavailable = vše vrací 503 forced_unavailable."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "mode"
+        ],
+        "title": "ErrorModeIn"
+      },
+      "ErrorModeOut": {
+        "properties": {
+          "mode": {
+            "type": "string",
+            "enum": [
+              "off",
+              "reject",
+              "unavailable"
+            ],
+            "title": "Mode"
+          }
+        },
+        "type": "object",
+        "required": [
+          "mode"
+        ],
+        "title": "ErrorModeOut"
+      },
+      "ErrorOut": {
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ErrorDetail"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "title": "ErrorOut"
+      },
+      "EventOneOut": {
+        "properties": {
+          "event": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ShotOut"
+              },
+              {
+                "$ref": "#/components/schemas/SubstitutionOut"
+              }
+            ],
+            "title": "Event"
+          }
+        },
+        "type": "object",
+        "required": [
+          "event"
+        ],
+        "title": "EventOneOut"
+      },
+      "EventsOut": {
+        "properties": {
+          "match_version": {
+            "type": "integer",
+            "title": "Match Version"
+          },
+          "events": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/ShotOut"
+                },
+                {
+                  "$ref": "#/components/schemas/SubstitutionOut"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Events"
+          }
+        },
+        "type": "object",
+        "required": [
+          "match_version",
+          "events"
+        ],
+        "title": "EventsOut"
+      },
+      "FormationsOut": {
+        "properties": {
+          "home": {
+            "items": {
+              "$ref": "#/components/schemas/LineOut"
+            },
+            "type": "array",
+            "title": "Home"
+          },
+          "away": {
+            "items": {
+              "$ref": "#/components/schemas/LineOut"
+            },
+            "type": "array",
+            "title": "Away"
+          }
+        },
+        "type": "object",
+        "required": [
+          "home",
+          "away"
+        ],
+        "title": "FormationsOut"
+      },
+      "LineOut": {
+        "properties": {
+          "line": {
+            "type": "integer",
+            "title": "Line",
+            "description": "Číslo řady (1–3)."
+          },
+          "lw": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lw",
+            "description": "Levé křídlo – id hráče, nebo null."
+          },
+          "c": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "C",
+            "description": "Center."
+          },
+          "rw": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rw",
+            "description": "Pravé křídlo."
+          },
+          "ld": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ld",
+            "description": "Levý obránce."
+          },
+          "rd": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rd",
+            "description": "Pravý obránce."
+          }
+        },
+        "type": "object",
+        "required": [
+          "line",
+          "lw",
+          "c",
+          "rw",
+          "ld",
+          "rd"
+        ],
+        "title": "LineOut"
+      },
+      "MatchItem": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "home": {
+            "type": "string",
+            "title": "Home"
+          },
+          "away": {
+            "type": "string",
+            "title": "Away"
+          },
+          "date": {
+            "type": "string",
+            "title": "Date"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "home",
+          "away",
+          "date"
+        ],
+        "title": "MatchItem"
+      },
+      "MatchOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "competition": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Competition"
+          },
+          "date": {
+            "type": "string",
+            "title": "Date"
+          },
+          "venue": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Venue"
+          },
+          "home": {
+            "$ref": "#/components/schemas/ClubOut"
+          },
+          "away": {
+            "$ref": "#/components/schemas/ClubOut"
+          },
+          "periods": {
+            "items": {
+              "$ref": "#/components/schemas/PeriodOut"
+            },
+            "type": "array",
+            "title": "Periods"
+          },
+          "version": {
+            "type": "integer",
+            "title": "Version",
+            "description": "Roste s každou změnou událostí utkání."
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "competition",
+          "date",
+          "venue",
+          "home",
+          "away",
+          "periods",
+          "version"
+        ],
+        "title": "MatchOut"
+      },
+      "MatchesOut": {
+        "properties": {
+          "matches": {
+            "items": {
+              "$ref": "#/components/schemas/MatchItem"
+            },
+            "type": "array",
+            "title": "Matches"
+          }
+        },
+        "type": "object",
+        "required": [
+          "matches"
+        ],
+        "title": "MatchesOut"
+      },
+      "MeOut": {
+        "properties": {
+          "team": {
+            "$ref": "#/components/schemas/TeamOut"
+          },
+          "matches": {
+            "items": {
+              "$ref": "#/components/schemas/MatchItem"
+            },
+            "type": "array",
+            "title": "Matches"
+          }
+        },
+        "type": "object",
+        "required": [
+          "team",
+          "matches"
+        ],
+        "title": "MeOut"
+      },
+      "OnIce": {
+        "properties": {
+          "home": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Home"
+          },
+          "away": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Away"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "OnIce",
+        "description": "Kdo byl při gólu na hřišti (id hráčů každé strany, nejvýš 6 na stranu)."
+      },
+      "PeriodOut": {
+        "properties": {
+          "period": {
+            "type": "integer",
+            "title": "Period",
+            "description": "Číslo hrací části, které se posílá v událostech."
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "length": {
+            "type": "string",
+            "title": "Length",
+            "description": "Délka části jako mm:ss. Čas události musí být menší."
+          },
+          "overtime": {
+            "type": "boolean",
+            "title": "Overtime"
+          }
+        },
+        "type": "object",
+        "required": [
+          "period",
+          "label",
+          "length",
+          "overtime"
+        ],
+        "title": "PeriodOut"
+      },
+      "PlayerOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id",
+            "description": "Id hráče v tomto utkání. Používá se v událostech."
+          },
+          "jersey": {
+            "type": "integer",
+            "title": "Jersey"
+          },
+          "first_name": {
+            "type": "string",
+            "title": "First Name"
+          },
+          "last_name": {
+            "type": "string",
+            "title": "Last Name"
+          },
+          "position": {
+            "type": "string",
+            "enum": [
+              "G",
+              "D",
+              "F"
+            ],
+            "title": "Position",
+            "description": "G = brankář, D = obránce, F = útočník."
+          },
+          "captain": {
+            "type": "boolean",
+            "title": "Captain"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "jersey",
+          "first_name",
+          "last_name",
+          "position",
+          "captain"
+        ],
+        "title": "PlayerOut"
+      },
+      "PutEventOut": {
+        "properties": {
+          "event": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ShotOut"
+              },
+              {
+                "$ref": "#/components/schemas/SubstitutionOut"
+              }
+            ],
+            "title": "Event"
+          },
+          "created": {
+            "type": "boolean",
+            "title": "Created",
+            "description": "true = událost s tímto client_id právě vznikla."
+          },
+          "unchanged": {
+            "type": "boolean",
+            "title": "Unchanged",
+            "description": "true = tělo se shoduje s uloženým stavem, nic se nezměnilo (opakované doručení)."
+          }
+        },
+        "type": "object",
+        "required": [
+          "event",
+          "created",
+          "unchanged"
+        ],
+        "title": "PutEventOut"
+      },
+      "ResetOut": {
+        "properties": {
+          "deleted": {
+            "type": "integer",
+            "title": "Deleted"
+          }
+        },
+        "type": "object",
+        "required": [
+          "deleted"
+        ],
+        "title": "ResetOut"
+      },
+      "RinkOut": {
+        "properties": {
+          "width": {
+            "type": "integer",
+            "title": "Width"
+          },
+          "height": {
+            "type": "integer",
+            "title": "Height"
+          },
+          "center_x": {
+            "type": "integer",
+            "title": "Center X"
+          },
+          "origin": {
+            "type": "string",
+            "const": "top_left",
+            "title": "Origin"
+          },
+          "home_attacks": {
+            "type": "string",
+            "const": "right",
+            "title": "Home Attacks"
+          },
+          "note": {
+            "type": "string",
+            "title": "Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "width",
+          "height",
+          "center_x",
+          "origin",
+          "home_attacks",
+          "note"
+        ],
+        "title": "RinkOut"
+      },
+      "RosterOut": {
+        "properties": {
+          "home": {
+            "items": {
+              "$ref": "#/components/schemas/PlayerOut"
+            },
+            "type": "array",
+            "title": "Home"
+          },
+          "away": {
+            "items": {
+              "$ref": "#/components/schemas/PlayerOut"
+            },
+            "type": "array",
+            "title": "Away"
+          }
+        },
+        "type": "object",
+        "required": [
+          "home",
+          "away"
+        ],
+        "title": "RosterOut"
+      },
+      "ShotOut": {
+        "properties": {
+          "client_id": {
+            "type": "string",
+            "title": "Client Id",
+            "description": "UUID, které události přidělil klient."
+          },
+          "type": {
+            "type": "string",
+            "const": "shot",
+            "title": "Type"
+          },
+          "team": {
+            "type": "string",
+            "enum": [
+              "home",
+              "away"
+            ],
+            "title": "Team"
+          },
+          "period": {
+            "type": "integer",
+            "title": "Period"
+          },
+          "time": {
+            "type": "string",
+            "title": "Time"
+          },
+          "x": {
+            "type": "integer",
+            "title": "X"
+          },
+          "y": {
+            "type": "integer",
+            "title": "Y"
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "miss",
+              "on_goal",
+              "post",
+              "goal"
+            ],
+            "title": "Result"
+          },
+          "strength": {
+            "type": "string",
+            "enum": [
+              "even",
+              "power_play",
+              "short_handed"
+            ],
+            "title": "Strength"
+          },
+          "shooter_id": {
+            "type": "integer",
+            "title": "Shooter Id"
+          },
+          "goalkeeper_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Goalkeeper Id"
+          },
+          "assist_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Assist Id"
+          },
+          "on_ice": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/OnIce"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "version": {
+            "type": "integer",
+            "title": "Version",
+            "description": "Začíná na 1, každá skutečná změna ji zvýší."
+          },
+          "seq": {
+            "type": "integer",
+            "title": "Seq",
+            "description": "Pořadí prvního doručení události v utkání."
+          },
+          "created_at": {
+            "type": "string",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "title": "Updated At"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings",
+            "description": "Upozornění, která událost neodmítají, např. shot_from_own_half."
+          },
+          "deleted_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Deleted At",
+            "description": "Vyplněno jen u smazané události."
+          }
+        },
+        "type": "object",
+        "required": [
+          "client_id",
+          "type",
+          "team",
+          "period",
+          "time",
+          "x",
+          "y",
+          "result",
+          "strength",
+          "shooter_id",
+          "goalkeeper_id",
+          "assist_id",
+          "on_ice",
+          "version",
+          "seq",
+          "created_at",
+          "updated_at",
+          "warnings"
+        ],
+        "title": "ShotOut"
+      },
+      "SubstitutionOut": {
+        "properties": {
+          "client_id": {
+            "type": "string",
+            "title": "Client Id",
+            "description": "UUID, které události přidělil klient."
+          },
+          "type": {
+            "type": "string",
+            "const": "substitution",
+            "title": "Type"
+          },
+          "team": {
+            "type": "string",
+            "enum": [
+              "home",
+              "away"
+            ],
+            "title": "Team"
+          },
+          "period": {
+            "type": "integer",
+            "title": "Period"
+          },
+          "time": {
+            "type": "string",
+            "title": "Time"
+          },
+          "players": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Players"
+          },
+          "strength": {
+            "type": "string",
+            "enum": [
+              "even",
+              "power_play",
+              "short_handed"
+            ],
+            "title": "Strength"
+          },
+          "empty_net": {
+            "type": "boolean",
+            "title": "Empty Net"
+          },
+          "in": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "In",
+            "description": "Kdo přišel proti předchozímu střídání týmu."
+          },
+          "out": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Out",
+            "description": "Kdo odešel proti předchozímu střídání týmu."
+          },
+          "version": {
+            "type": "integer",
+            "title": "Version",
+            "description": "Začíná na 1, každá skutečná změna ji zvýší."
+          },
+          "seq": {
+            "type": "integer",
+            "title": "Seq",
+            "description": "Pořadí prvního doručení události v utkání."
+          },
+          "created_at": {
+            "type": "string",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "title": "Updated At"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings",
+            "description": "Upozornění, která událost neodmítají, např. shot_from_own_half."
+          },
+          "deleted_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Deleted At",
+            "description": "Vyplněno jen u smazané události."
+          }
+        },
+        "type": "object",
+        "required": [
+          "client_id",
+          "type",
+          "team",
+          "period",
+          "time",
+          "players",
+          "strength",
+          "empty_net",
+          "in",
+          "out",
+          "version",
+          "seq",
+          "created_at",
+          "updated_at",
+          "warnings"
+        ],
+        "title": "SubstitutionOut"
+      },
+      "TeamOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "title": "TeamOut"
+      },
+      "ShotIn": {
+        "additionalProperties": false,
+        "description": "Střela.",
+        "properties": {
+          "team": {
+            "description": "Tým, kterého se událost týká: home = domácí, away = hosté.",
+            "enum": [
+              "home",
+              "away"
+            ],
+            "title": "Team",
+            "type": "string"
+          },
+          "period": {
+            "description": "Hrací část podle hlavičky utkání (1–3, prodloužení 4).",
+            "title": "Period",
+            "type": "integer"
+          },
+          "time": {
+            "description": "Čas od začátku hrací části, jak ho ukazuje časomíra: \"mm:ss\".",
+            "examples": [
+              "07:42"
+            ],
+            "pattern": "^[0-9]{2}:[0-5][0-9]$",
+            "title": "Time",
+            "type": "string"
+          },
+          "strength": {
+            "default": "even",
+            "description": "Poměr sil z pohledu týmu: even = vyrovnaný, power_play = přesilovka, short_handed = oslabení.",
+            "enum": [
+              "even",
+              "power_play",
+              "short_handed"
+            ],
+            "title": "Strength",
+            "type": "string"
+          },
+          "version": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "Nepovinné. Verze události, ze které klient vychází. Když se liší od uložené a obsah je jiný, vrací se 409 version_conflict.",
+            "title": "Version"
+          },
+          "type": {
+            "const": "shot",
+            "title": "Type",
+            "type": "string"
+          },
+          "x": {
+            "description": "Vodorovná souřadnice 0–890. Domácí útočí vždy doprava (x ≥ 445).",
+            "maximum": 890,
+            "minimum": 0,
+            "title": "X",
+            "type": "integer"
+          },
+          "y": {
+            "description": "Svislá souřadnice 0–501, počátek vlevo nahoře.",
+            "maximum": 501,
+            "minimum": 0,
+            "title": "Y",
+            "type": "integer"
+          },
+          "result": {
+            "description": "miss = mimo, on_goal = na branku (chycená), post = tyčka, goal = gól.",
+            "enum": [
+              "miss",
+              "on_goal",
+              "post",
+              "goal"
+            ],
+            "title": "Result",
+            "type": "string"
+          },
+          "shooter_id": {
+            "description": "Id střelce; musí být hráč týmu `team`.",
+            "title": "Shooter Id",
+            "type": "integer"
+          },
+          "goalkeeper_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "Id brankáře soupeře; null = prázdná branka nebo neuvedeno.",
+            "title": "Goalkeeper Id"
+          },
+          "assist_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "Jen u gólu: id asistujícího hráče týmu `team`.",
+            "title": "Assist Id"
+          },
+          "on_ice": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/OnIce"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "Jen u gólu: kdo byl na hřišti."
+          }
+        },
+        "required": [
+          "team",
+          "period",
+          "time",
+          "type",
+          "x",
+          "y",
+          "result",
+          "shooter_id"
+        ],
+        "title": "ShotIn",
+        "type": "object"
+      },
+      "SubstitutionIn": {
+        "additionalProperties": false,
+        "description": "Střídání: sestava, která v daný čas nastoupila.",
+        "properties": {
+          "team": {
+            "description": "Tým, kterého se událost týká: home = domácí, away = hosté.",
+            "enum": [
+              "home",
+              "away"
+            ],
+            "title": "Team",
+            "type": "string"
+          },
+          "period": {
+            "description": "Hrací část podle hlavičky utkání (1–3, prodloužení 4).",
+            "title": "Period",
+            "type": "integer"
+          },
+          "time": {
+            "description": "Čas od začátku hrací části, jak ho ukazuje časomíra: \"mm:ss\".",
+            "examples": [
+              "07:42"
+            ],
+            "pattern": "^[0-9]{2}:[0-5][0-9]$",
+            "title": "Time",
+            "type": "string"
+          },
+          "strength": {
+            "default": "even",
+            "description": "Poměr sil z pohledu týmu: even = vyrovnaný, power_play = přesilovka, short_handed = oslabení.",
+            "enum": [
+              "even",
+              "power_play",
+              "short_handed"
+            ],
+            "title": "Strength",
+            "type": "string"
+          },
+          "version": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "Nepovinné. Verze události, ze které klient vychází. Když se liší od uložené a obsah je jiný, vrací se 409 version_conflict.",
+            "title": "Version"
+          },
+          "type": {
+            "const": "substitution",
+            "title": "Type",
+            "type": "string"
+          },
+          "players": {
+            "description": "Id hráčů v poli po střídání (3–6, bez brankářů). Šest jen při hře bez brankáře (`empty_net: true`).",
+            "items": {
+              "type": "integer"
+            },
+            "maxItems": 6,
+            "minItems": 3,
+            "title": "Players",
+            "type": "array",
+            "uniqueItems": true
+          },
+          "empty_net": {
+            "default": false,
+            "description": "Hra bez brankáře.",
+            "title": "Empty Net",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "team",
+          "period",
+          "time",
+          "type",
+          "players"
+        ],
+        "title": "SubstitutionIn",
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

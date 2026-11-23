@@ -1,0 +1,426 @@
+/* Floorball Mate – the scorer's table by the boards.
+   Colours and type follow the Czech floorball web (ceskyflorbal.cz): red bar, dark score boxes,
+   condensed uppercase headings, small radii. The hall floor with the shots carries the content.
+   4 px grid, weights 400–600, one selected style. */
+
+:root {
+  --red: #d51223;                 /* Český florbal red */
+  --red-dark: #a00d1a;
+  --red-deep: #780a13;
+  --navy: #09293e;
+  --bg: #f7f7f7;
+  --panel: #fff;
+  --sunk: #eee;
+  --ink: #1b1b1b;
+  --ink-2: #333;
+  --muted: #666;
+  --hair: rgb(0 0 0 / .1);
+  --hair-2: rgb(0 0 0 / .18);
+  --floor: #e7e3da;               /* hall floor under the court lines */
+  --veil: rgb(247 247 247 / .62);
+
+  /* team colours from the match pages of ceskyflorbal.cz */
+  --home: #305995; --home-ink: #305995; --home-soft: #ebf0f6; --home-line: rgb(48 89 149 / .32);
+  --away: #ec6906; --away-ink: #b35000; --away-soft: #fdf1e7; --away-line: rgb(236 105 6 / .38);
+  --ok: #2c7a4b; --ok-soft: #e6f1ea;
+  --warn: #965a00; --warn-soft: #faf0dd;
+  --bad: #b3332b; --bad-soft: #fbeae8;
+
+  /* condensed DIN-like faces that ship with the system (Windows: Bahnschrift, Android: Roboto Condensed) */
+  --cond: "Bahnschrift SemiCondensed", "Bahnschrift", "Roboto Condensed", "Arial Narrow", sans-serif-condensed, sans-serif;
+  --num: "Bahnschrift", "Roboto Condensed", "DIN Alternate", "Arial Narrow", sans-serif-condensed, sans-serif;
+  --r-ctl: 5px; --r-card: 6px; --r-panel: 8px;
+  --sel: inset 0 0 0 2px var(--red);   /* the one selected state */
+  --ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+/* team identity: every element with .home / .away gets its colours */
+.home, .home-dlg { --team: var(--home); --team-ink: var(--home-ink); --team-soft: var(--home-soft); --team-line: var(--home-line); }
+.away, .away-dlg { --team: var(--away); --team-ink: var(--away-ink); --team-soft: var(--away-soft); --team-line: var(--away-line); }
+
+/* ---------- base ---------- */
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+body { -webkit-user-select: none; user-select: none; touch-action: manipulation; }
+h1, h2, h3 { margin: 0; font-weight: 600; }
+b, strong { font-weight: 600; }
+p { margin: 0; }
+.ic { flex: none; vertical-align: middle; }
+.muted { color: var(--muted); }
+.err { color: var(--bad); font-weight: 500; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+button {
+  font: inherit; color: inherit; min-height: 48px; padding: 0 16px; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--panel); border: 1px solid var(--hair-2); border-radius: var(--r-ctl);
+  transition: background-color .16s var(--ease), border-color .16s var(--ease), color .16s var(--ease), box-shadow .16s var(--ease), opacity .2s var(--ease);
+}
+@media (hover: hover) {
+  /* a tint over whatever colour the button has, so team and primary buttons darken too */
+  button:not(:disabled):hover { background-image: linear-gradient(rgb(26 28 27 / .05), rgb(26 28 27 / .05)); }
+}
+button:active:not(:disabled) { transform: translateY(1px); }
+button:disabled { opacity: .4; cursor: default; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+button.primary { background: var(--red); border-color: var(--red); color: #fff; }
+button.on { background: var(--panel); border-color: transparent; box-shadow: var(--sel); color: var(--red-dark); }
+
+/* the federation's type voice: condensed uppercase for headings, tabs and main actions */
+.list h1, .colhead, .teamhead h2, .statcard h3, .log h3, .edpanel h3, .edhead h2, dialog h2, .rp-q, .switchteam b,
+.plhead b, .lockmsg, .newsub, button.primary, .top > .row > button, .match {
+  font-family: var(--cond); text-transform: uppercase; letter-spacing: .02em; font-weight: 600; }
+dialog h2 .muted { font-family: system-ui, sans-serif; text-transform: none; letter-spacing: 0; }
+/* small section labels like "Zápasy", "Tabulka" on the web */
+.rp-sec, .fgroup .fl, .leaders > .muted, .sect > b, .gk-sep, .vrow > span:first-child, .bhead > b:first-child {
+  font-family: var(--cond); text-transform: uppercase; letter-spacing: .04em; }
+
+input, select { font: inherit; color: var(--ink); min-height: 44px; padding: 0 12px; background: var(--panel);
+  border: 1px solid var(--hair-2); border-radius: var(--r-ctl); }
+input:focus { border-color: var(--ink); }
+
+/* ---------- match list ---------- */
+.list { max-width: 720px; margin: 0 auto; padding: 48px 24px; display: grid; gap: 12px; }
+.list h1 { font-size: 28px; margin-bottom: 12px; }
+.list label { display: inline-flex; align-items: center; gap: 12px; color: var(--ink-2); }
+.list input { width: 200px; }
+.list button[data-id] { justify-content: space-between; min-height: 64px; padding: 0 20px; text-align: left; }
+.list button[data-id] .muted { font: 14px var(--num); }
+
+/* ---------- top bar: one line on a 1280 px tablet ---------- */
+/* red bar like the header of ceskyflorbal.cz */
+.top { position: sticky; top: 0; z-index: 3; display: flex; align-items: center; gap: 4px; padding: 6px 8px;
+  background: var(--red); color: #fff; box-shadow: 0 1px 0 var(--red-deep); }
+.top :focus-visible { outline-color: #fff; }
+.top > button { background: transparent; color: #fff; border-color: rgb(255 255 255 / .4); }
+#back, .fsbtn { border-color: transparent; }
+#back { width: 48px; padding: 0; }
+/* the Český florbal shield, drawn white on the red bar (the PNG is the shape, the colour comes from CSS) */
+#back .logo { width: 30px; height: 33px; background: #fff;
+  -webkit-mask: url(../img/cesky-florbal-lines.png) center / contain no-repeat; mask: url(../img/cesky-florbal-lines.png) center / contain no-repeat; }
+.match { display: inline-flex; align-items: center; gap: 8px; padding: 0 8px; white-space: nowrap; font-size: 16px; }
+/* signature: the dark score box, as in the match lists on the web */
+.score { padding: 2px 10px; border-radius: 4px; background: var(--ink); color: #fff;
+  font: 600 22px/1.2 var(--num); font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+/* periods and tabs: segmented groups on darker red, the selected one white */
+.top > .row { gap: 0; flex-wrap: nowrap; padding: 2px; background: var(--red-dark); border-radius: var(--r-ctl); }
+.top > .row > button { min-height: 44px; border: 0; background: transparent; color: #fff; border-radius: 4px; }
+.top > .row > button.on { background: #fff; color: var(--red); box-shadow: none; }
+.top .tm > b { color: #fff; }
+.top .tm .step { background: rgb(255 255 255 / .16); color: #fff; }
+.top .sync { background: #fff; }
+.top [data-period] { min-width: 44px; padding: 0 6px; font-variant-numeric: tabular-nums; }
+.tabs button { padding: 0 10px; }
+.badge { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px;
+  background: var(--ink); color: #fff; font: 600 12px/1 var(--num); }
+.lock { padding: 0 10px; font-size: 15px; font-weight: 500; }
+.lock.on { background: var(--ink); border-color: var(--ink); color: #fff; box-shadow: none; }
+.lock.mic { width: 48px; padding: 0; }
+.lock.mic.on { background: var(--ok); border-color: var(--ok); }
+.sync { margin-left: auto; padding: 4px 10px; border-radius: 4px; font-size: 13px; font-weight: 500; white-space: nowrap; }
+.sync.wait { background: var(--warn-soft); color: var(--warn); }
+.sync.bad { background: var(--bad-soft); color: var(--bad); }
+.fsbtn { margin-left: auto; width: 48px; padding: 0; }
+.sync + .fsbtn { margin-left: 0; }
+
+/* time: game-clock digits in dark boxes, steppers around them */
+.tm { display: inline-flex; align-items: center; gap: 2px; }
+.tm > b { font: 600 22px/1 var(--num); padding: 0 2px; }
+.tm input { width: 44px; min-height: 48px; padding: 0; text-align: center; background: var(--ink); color: #fff;
+  border-color: var(--ink); caret-color: #fff; font: 600 24px/1 var(--num); font-variant-numeric: tabular-nums; }
+.tm input::selection { background: rgb(255 255 255 / .3); }
+.tm .step { min-width: 44px; min-height: 48px; padding: 0; background: var(--sunk); border-color: transparent;
+  color: var(--ink-2); font: 600 13px/1 var(--num); touch-action: none; }
+
+/* ---------- Střely: line-up columns, the rink, the bar under it ---------- */
+.shotsview { display: grid; grid-template-columns: 192px minmax(0, 1fr) 192px; gap: 8px; padding: 8px 12px; }
+.center { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+
+/* columns exactly as tall as the rink (rink height = its width × 501/890), players share that height */
+.linecol { display: flex; flex-direction: column; gap: 4px; padding: 0 8px 8px; align-self: start; overflow: hidden;
+  height: min(calc((100vw - 424px) * 501 / 890), calc(100dvh - 230px));
+  background: var(--team-soft); border: 1px solid var(--team-line); border-radius: var(--r-card);
+  transition: opacity .2s var(--ease), box-shadow .2s var(--ease); }
+.linecol.active { box-shadow: 0 0 0 2px var(--team); }
+.shotsview:has(.linecol.active) .linecol:not(.active) { opacity: .45; }
+.colhead { margin: 0 -8px 4px; padding: 8px 12px; background: var(--team); color: #fff; font-size: 14px; font-weight: 600;
+  border-radius: 5px 5px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sitnote { padding: 4px 8px; border-radius: 4px; font-size: 13px; font-weight: 500; background: var(--panel);
+  color: var(--team-ink); box-shadow: inset 0 0 0 1px var(--team-line); }
+.pl { display: grid; grid-template-columns: 28px 44px 1fr; align-items: center; gap: 4px; min-height: 48px; padding: 0 8px;
+  text-align: left; background: var(--panel); border-color: var(--hair); border-radius: 4px; }
+.linecol .pl:not(.goalie) { flex: 1 1 0; }
+.pl .slot { font-size: 12px; font-weight: 500; color: var(--muted); }
+.pl .n { font: 600 24px/1 var(--num); font-variant-numeric: tabular-nums; }
+.pl .nm { font-size: 13px; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pl[aria-pressed="true"] { box-shadow: var(--sel); }
+.gk-sep { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--hair-2); font-size: 12px; font-weight: 500; color: var(--muted); }
+.pl.goalie { flex: 0 0 auto; min-height: 44px; background: transparent; border: 1px dashed var(--hair-2); color: var(--muted); }
+.pl.goalie .n { font-size: 20px; }
+.nolineup { font-size: 14px; padding: 4px; }
+
+/* the moment: the rink as a hall floor, court lines printed on it, team markers the only strong colour */
+.rink { position: relative; aspect-ratio: 890 / 501; width: min(100%, calc((100dvh - 230px) * 890 / 501)); margin: 0 auto;
+  touch-action: none; background: var(--floor); border-radius: 5.2% / 9.2%;
+  box-shadow: 0 1px 2px rgb(26 28 27 / .06), 0 12px 28px -16px rgb(26 28 27 / .3); }
+.rink > img, .rink > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.rink > img { pointer-events: none; mix-blend-mode: multiply; }
+.rink.flipped > img, .rink img.mirror { transform: scaleX(-1); }
+.rink.locked::after { content: ''; position: absolute; inset: 0; background: var(--veil); border-radius: inherit; pointer-events: none; }
+.slotzone { fill: rgb(26 28 27 / .06); stroke: rgb(26 28 27 / .4); stroke-width: 1.5; stroke-dasharray: 6 6; }
+.lockmsg { position: absolute; z-index: 2; left: 50%; top: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center;
+  gap: 8px; padding: 12px 16px; border-radius: 6px; background: var(--ink); color: #fff; font-weight: 500; white-space: nowrap; pointer-events: none; }
+
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-height: 60px; padding: 8px 12px;
+  background: var(--panel); border: 1px solid var(--hair); border-radius: var(--r-card); }
+.bar.active { border-color: var(--team); box-shadow: inset 0 0 0 1px var(--team); }
+.bar .hint { flex: 1; min-width: 160px; font-size: 16px; }
+.bar .hint .ic { margin: -2px 4px 0 0; }
+.bar button.small { min-height: 44px; }
+.legend { margin-left: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; font-size: 14px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 4px; }
+.sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--team); }
+
+/* result menu at the finger */
+.qpop { position: absolute; z-index: 4; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 8px;
+  background: var(--panel); border: 1px solid var(--hair-2); border-radius: var(--r-card);
+  box-shadow: 0 16px 40px -12px rgb(26 28 27 / .35), 0 2px 6px rgb(26 28 27 / .08); animation: pop .18s var(--ease); }
+.qpop button { min-height: 56px; min-width: 132px; justify-content: flex-start; padding: 0 12px; font-size: 16px; font-weight: 500; white-space: nowrap; }
+
+/* voice popup */
+.vpop { display: flex; flex-direction: column; gap: 8px; width: 480px; max-width: 46vw; padding: 12px;
+  background: var(--team-soft); border-color: var(--team); transition: background-color .22s var(--ease), border-color .22s var(--ease); }
+.vheard { display: flex; align-items: center; gap: 8px; min-height: 24px; font-size: 15px; color: var(--ink-2); }
+.vheard .live { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--bad); white-space: nowrap; }
+.vheard .live::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--bad); animation: rec 1.2s ease-in-out infinite alternate; }
+.vrow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.vrow > span:first-child { width: 92px; font-size: 13px; font-weight: 500; color: var(--muted); }
+.vpop .vrow button { min-height: 44px; padding: 0 12px; font-size: 14px; font-weight: 500; }
+/* team switch: one tap slides the thumb to the other team (sides as on the rink) */
+.vpop .vrow .tswitch { position: relative; flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 48px; padding: 2px; gap: 0; border-color: var(--team-line); }
+.tswitch .thumb { position: absolute; top: 2px; bottom: 2px; left: 2px; width: calc(50% - 2px); border-radius: 4px; background: var(--team);
+  transition: transform .22s var(--ease), background-color .22s var(--ease); }
+.tswitch.right .thumb { transform: translateX(100%); }
+.tswitch span { position: relative; display: grid; place-items: center; color: var(--muted); font-family: var(--cond); font-size: 16px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .02em; transition: color .22s var(--ease); }
+.tswitch span.cur { color: #fff; }
+.vrow.vres { display: grid; grid-template-columns: 92px 1fr 1fr; }
+.vrow.vres > span:first-child { grid-row: span 2; align-self: start; padding-top: 12px; width: auto; }
+.vrow.vres button { width: 100%; }
+.vpop input { width: 72px; min-height: 48px; padding: 0; text-align: center; font: 600 24px/1 var(--num); }
+.vpop input.bad { border: 2px solid var(--bad); color: var(--bad); }
+.vname { font-weight: 500; }
+.vname.bad { color: var(--bad); }
+.vact { justify-content: flex-end; margin-top: 4px; }
+.vact .primary { min-width: 112px; }
+
+/* ---------- shooter / assist: half-screen roster, the other half switches team ---------- */
+.pickview { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 12px; min-height: calc(100dvh - 72px); }
+.rosterpanel { display: flex; flex-direction: column; gap: 8px; padding: 12px; overflow: auto; max-height: calc(100dvh - 88px);
+  background: var(--team-soft); border: 1px solid var(--team-line); border-radius: var(--r-panel); }
+.rp-head { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: 15px; color: var(--ink-2); }
+.rp-head b { color: var(--ink); }
+.rp-q { flex-basis: 100%; margin-top: 4px; font-size: 24px; font-weight: 600; color: var(--ink); }
+.rp-sec { margin-top: 8px; font-size: 13px; font-weight: 500; color: var(--muted); }
+.rp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+.rp-grid.five { grid-template-columns: repeat(auto-fit, minmax(72px, 1fr)); }
+.rp { display: grid; justify-items: center; align-content: center; gap: 2px; min-height: 64px; padding: 4px 6px; line-height: 1.15;
+  background: var(--panel); border-color: var(--hair); }
+.rp b { font: 600 24px/1.1 var(--num); font-variant-numeric: tabular-nums; }
+.rp span { max-width: 100%; font-size: 13px; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rp small { font-size: 12px; font-weight: 500; color: var(--muted); }
+.rp.ice { min-height: 76px; border-color: var(--team); }
+.rp.ice b { font-size: 30px; }
+.rp.sel { background: var(--panel); box-shadow: var(--sel); }
+.rp.gk { opacity: .7; }
+.rp.gk-on { opacity: 1; }
+.rp.none { opacity: .5; }
+.rp.innew { opacity: .4; }
+.rp.inline { opacity: .7; }
+.rp.inline small { color: var(--ink); }
+.rp.rec { background: color-mix(in srgb, var(--team) 14%, #fff); border-color: var(--team); box-shadow: inset 0 0 0 1px var(--team); }
+.rp.empty { display: grid; place-items: center; min-height: 64px; border: 1px dashed var(--hair-2); border-radius: var(--r-ctl);
+  background: transparent; color: var(--muted); font-size: 20px; }
+.rp.empty.note { padding: 0 8px; font-size: 13px; font-weight: 500; text-align: center; }
+.rp.empty.extra { gap: 2px; cursor: pointer; }
+.rp.empty.extra b { font: 600 20px/1 var(--num); }
+.rp.empty.extra span { font-size: 12px; font-weight: 500; color: var(--muted); }
+.rp.empty.extra.sel { background: var(--panel); box-shadow: var(--sel); }
+.rp-foot { margin-top: auto; padding-top: 8px; }
+.pill { padding: 2px 8px; border-radius: 4px; font-size: 13px; font-weight: 500; white-space: nowrap; background: var(--panel);
+  color: var(--team-ink); box-shadow: inset 0 0 0 1px var(--team-line); }
+.switchteam { flex-direction: column; gap: 8px; font-size: 16px; color: var(--team-ink); background: var(--panel);
+  border: 1px dashed var(--team); border-radius: var(--r-panel); }
+.switchteam b { font-size: 24px; }
+.switchteam span { font-size: 14px; color: var(--muted); }
+
+/* ---------- Střídání: one half per team ---------- */
+.subsview { display: grid; gap: 12px; padding: 12px; }
+.teams { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+@media (max-width: 900px) { .teams { grid-template-columns: 1fr; } }
+.team { display: grid; gap: 12px; padding: 12px; background: var(--panel); border: 1px solid var(--hair); border-radius: var(--r-panel); }
+.teamhead { justify-content: space-between; flex-wrap: nowrap; gap: 12px; }
+.teamhead h2, .statcard h3 { flex: 0 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.teamhead h2 { font-size: 18px; }
+.teamhead h2::before, .statcard h3::before { content: ''; display: inline-block; width: 10px; height: 10px; margin-right: 8px;
+  border-radius: 50%; background: var(--team); vertical-align: 1px; }
+.ppbtn { flex: 1; font-weight: 500; }
+.ppbtn.on { background: var(--team); border-color: var(--team); color: #fff; box-shadow: none; }
+.onice-row { gap: 4px; font-size: 14px; }
+.onice-row .muted { margin-right: 4px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { display: inline-flex; align-items: baseline; justify-content: center; gap: 4px; min-width: 40px; padding: 4px 8px; border-radius: 4px;
+  background: var(--team-soft, var(--sunk)); font: 600 15px/1.2 var(--num); font-variant-numeric: tabular-nums; }
+.chip small { font: 500 12px/1 system-ui, sans-serif; color: var(--muted); }
+.chip.gk { background: var(--sunk); }
+
+.newsub { min-height: 80px; gap: 12px; font-size: 22px; font-weight: 500; color: var(--team-ink); background: var(--team-soft); border-color: var(--team-line); }
+.shifts { display: grid; gap: 8px; }
+.shift { display: grid; grid-template-columns: 64px 44px repeat(auto-fit, minmax(0, 1fr)); align-items: center; gap: 4px;
+  min-height: 76px; padding: 8px 12px; text-align: left; background: var(--panel); border-color: var(--team-line); border-radius: var(--r-card); }
+.shift.cur { background: var(--team-soft); border-color: var(--team); box-shadow: inset 0 0 0 1px var(--team); }
+.shift .pm { font: 600 30px/1 var(--num); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pm.plus, .pmv.plus { color: var(--ok); }
+.pm.minus, .pmv.minus { color: var(--bad); }
+.shift .stime { font: 600 13px var(--num); color: var(--muted); }
+.gkb { position: relative; top: -4px; margin-left: 6px; font: 600 18px/1 system-ui, sans-serif; color: var(--ink); vertical-align: middle; }
+.cell, .cellb { display: grid; justify-items: center; align-content: center; min-width: 0; line-height: 1.15; }
+.cell small, .cellb small { font-size: 12px; font-weight: 500; color: var(--muted); }
+.cell b, .cellb b { font: 600 24px/1.1 var(--num); font-variant-numeric: tabular-nums; }
+.cell i, .cellb i { max-width: 100%; font-style: normal; font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.morebtn { min-height: 44px; font-size: 14px; color: var(--ink-2); }
+.editbtn { font-weight: 500; }
+
+.builder { display: grid; gap: 12px; padding: 12px; background: var(--team-soft); border: 1px solid var(--team); border-radius: var(--r-card); }
+.bhead { font-size: 15px; color: var(--ink-2); }
+.bhead b { color: var(--ink); }
+.bhead .muted { display: block; margin-top: 2px; font-size: 13px; }
+.bact { justify-content: flex-end; }
+.subpicker { max-height: calc(100dvh - 88px); }
+.pline { display: grid; gap: 8px; padding: 8px; border-radius: 6px; background: rgb(255 255 255 / .6); }
+.plhead { display: flex; align-items: center; gap: 8px; font-size: 15px; }
+.plhead button { margin-left: auto; min-height: 44px; font-weight: 500; }
+.rechint { flex-basis: 100%; font-size: 14px; }
+
+/* locked like the rink: a veil over both teams, "Upravit řady" stays usable */
+.sublock { position: absolute; inset: 0; z-index: 2; background: var(--veil); border-radius: var(--r-panel); }
+.subsview .teams > .lockmsg { z-index: 3; }
+.subsview.locked .editbtn { position: relative; z-index: 3; }
+
+/* floating "Skrýt starší střídání", centred on the open team's half (left set from JS) */
+.floatless { position: fixed; left: 50%; bottom: 24px; z-index: 5; transform: translateX(-50%); min-height: 52px; padding: 0 24px;
+  font-weight: 500; color: #fff; background: color-mix(in srgb, var(--team) 60%, transparent); border-color: var(--team);
+  border-radius: var(--r-ctl); backdrop-filter: blur(6px); box-shadow: 0 12px 28px -12px rgb(26 28 27 / .45); }
+.floatless[hidden] { display: none; }
+.floatless:active:not(:disabled) { transform: translateX(-50%) translateY(1px); }
+
+/* full-screen line editor */
+.editorview { display: grid; gap: 12px; padding: 12px; }
+.edhead { justify-content: flex-end; }
+.edhead h2 { margin-right: auto; font-size: 20px; }
+.edgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+.edpanel { display: grid; gap: 8px; padding: 12px; background: var(--team-soft); border: 1px solid var(--team-line); border-radius: var(--r-panel); }
+.edpanel h3 { margin-top: 4px; font-size: 15px; }
+.edpanel.players .rp-grid { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); }
+.lineb { display: grid; grid-template-columns: 64px repeat(5, minmax(0, 1fr)); align-items: center; gap: 4px; min-height: 84px; padding: 8px;
+  background: var(--panel); border: 1px solid var(--hair); border-radius: 6px; }
+.lname { font-size: 14px; font-weight: 500; }
+.cellb { min-height: 72px; padding: 2px; }
+.cellb.empty { border-style: dashed; color: var(--muted); }
+.cellb.sel { box-shadow: var(--sel); }
+
+/* ---------- Zápis ---------- */
+.logview { display: grid; gap: 12px; padding: 12px; }
+.logview .filters, .log { width: 100%; max-width: 1100px; margin: 0 auto; }
+.log { background: var(--panel); border: 1px solid var(--hair); border-radius: var(--r-card); overflow: hidden; }
+.log h3 { padding: 12px 16px; font-size: 17px; background: var(--red); color: #fff; }  /* red panel header as on the web */
+.log > p { padding: 16px; }
+.ev { display: grid; grid-template-columns: 80px 72px 1fr auto; align-items: center; gap: 12px; padding: 8px 16px; border-bottom: 1px solid var(--hair); }
+.ev:last-child { border-bottom: 0; }
+.ev .t { font: 600 15px var(--num); font-variant-numeric: tabular-nums; }
+.ev .side { font-size: 13px; font-weight: 500; color: var(--team-ink); }
+.ev > div > .muted { display: block; margin-top: 4px; font-size: 13px; }
+.ev .st { font-size: 13px; }
+.ev.pending .st { color: var(--warn); }
+.ev.rejected { background: var(--bad-soft); }
+.ev.rejected .st { color: var(--bad); font-weight: 500; }
+.ev .note { font-size: 13px; color: var(--warn); }
+.ev .row { flex-wrap: nowrap; }
+.ev button { min-height: 44px; padding: 0 12px; }
+.ev [data-del] { width: 44px; padding: 0; color: var(--muted); }
+
+/* filters (Zápis and Analýza): segmented groups that wrap as wholes */
+.filters.grouped { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 16px; padding: 12px 16px;
+  background: var(--panel); border: 1px solid var(--hair); border-radius: var(--r-card); }
+.fgroup { display: flex; flex-wrap: nowrap; align-items: center; gap: 2px; padding: 2px; background: var(--sunk); border-radius: 7px; }
+.fgroup .fl { margin: 0 8px; font-size: 13px; font-weight: 500; color: var(--muted); white-space: nowrap; }
+.fgroup button.small { min-height: 44px; padding: 0 12px; gap: 4px; border: 0; background: transparent; white-space: nowrap; font-size: 15px; }
+.fgroup button.small.on { background: var(--panel); box-shadow: var(--sel); }
+
+/* ---------- Analýza: team cards beside the map, filter above it ---------- */
+.statsview { display: grid; gap: 8px; padding: 8px 12px; }
+/* the middle column is as wide as the map (never under 860 px so the two filter rows fit); the cards take the rest */
+.statsgrid { display: grid; gap: 8px; align-items: stretch;
+  grid-template-columns: minmax(180px, 1fr) max(860px, min(calc((100dvh - 270px) * 890 / 501), calc(100vw - 420px))) minmax(180px, 1fr); }
+.statscenter { display: grid; gap: 8px; min-width: 0; align-content: start; }
+.statscenter .filters.grouped { flex-direction: column; gap: 8px; padding: 8px; }
+.frow { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.statscenter .fgroup .fl { margin: 0 4px 0 8px; font-size: 12px; }
+.statscenter .fgroup button.small { padding: 0 8px; font-size: 14px; }
+.statsgrid .rink { width: min(100%, calc((100dvh - 270px) * 890 / 501)); }
+.slotnote { margin-top: 4px; font-size: 13px; text-align: center; }
+.statcard { display: flex; flex-direction: column; gap: 8px; padding: 12px; background: var(--team-soft); border: 1px solid var(--team-line); border-radius: var(--r-card); }
+.statcard.off { opacity: .5; }
+.statcard h3 { font-size: clamp(15px, 1.3vw, 20px); }
+.kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.kpis div { display: grid; padding: 4px 8px; background: var(--panel); border-radius: 4px; }
+.kpis b { font: 600 clamp(22px, 1.8vw, 36px)/1.2 var(--num); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.kpis span { font-size: clamp(12px, .95vw, 15px); color: var(--muted); }
+.leaders { display: grid; gap: 4px; }
+.leaders > .muted { margin-top: 4px; font-size: 13px; }
+.leaders button { justify-content: flex-start; min-height: clamp(44px, 3.4vw, 52px); padding: 0 8px; text-align: left; font-size: clamp(13px, 1vw, 16px); }
+.leaders button b { min-width: 2ch; font-family: var(--num); font-weight: 600; }
+.leaders button span { margin-left: auto; font: clamp(12px, .9vw, 14px) var(--num); color: var(--muted); white-space: nowrap; }
+
+/* ---------- dialogs: pinned to the top, so a section appearing below never moves what is under the finger ---------- */
+dialog { width: min(760px, 96vw); max-height: 94vh; margin: 3vh auto auto; padding: 20px; color: var(--ink); background: var(--panel);
+  border: 0; border-radius: var(--r-panel); box-shadow: 0 24px 64px -16px rgb(26 28 27 / .4); }
+dialog[open] { animation: rise .2s var(--ease); }
+dialog::backdrop { background: rgb(26 28 27 / .4); }
+dialog h2 { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 20px; }
+dialog h2 .muted { font-size: 15px; font-weight: 400; }
+dialog.players-dlg { width: min(1100px, 96vw); }
+.pickview.dlg { min-height: 0; padding: 0; }
+.pickview.dlg .rosterpanel { max-height: 62vh; }
+.rp .pmv { font-size: 14px; font-weight: 600; }
+.psort { margin-bottom: 12px; }
+.sect { display: grid; gap: 8px; margin: 12px 0; }
+.sect > b { font-size: 13px; font-weight: 500; color: var(--muted); }
+.note.err { font-size: 14px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 8px; }
+.grid button { display: grid; justify-items: center; align-content: center; gap: 2px; min-height: 56px; padding: 4px; line-height: 1.15; }
+.grid button .n { font: 600 20px/1.1 var(--num); }
+.grid button .nm { max-width: 100%; font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.grid button.ice { background: var(--team-soft); }
+.grid.big { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+.grid.big button { min-height: 72px; }
+.grid.big button .n { font-size: 28px; }
+.actions { position: sticky; bottom: -20px; display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; padding: 12px 0 20px;
+  background: var(--panel); border-top: 1px solid var(--hair); }
+
+/* ---------- toast ---------- */
+#toast { position: fixed; left: 50%; bottom: 24px; z-index: 10; transform: translateX(-50%); display: none; align-items: center; gap: 12px;
+  max-width: min(720px, 92vw); padding: 12px 16px; background: var(--ink); color: #fff; border-radius: var(--r-card); font-size: 15px;
+  box-shadow: 0 16px 40px -12px rgb(0 0 0 / .45); }
+#toast.show { display: flex; animation: toastin .22s var(--ease); }
+#toast button { min-height: 44px; background: transparent; color: #fff; border-color: rgb(255 255 255 / .3); }
+
+/* ---------- motion: short, one easing, nothing loops except the recording dot ---------- */
+@keyframes pop { from { opacity: 0; scale: .96; } }
+@keyframes rise { from { opacity: 0; translate: 0 8px; } }
+@keyframes toastin { from { opacity: 0; translate: 0 8px; } }
+@keyframes rec { to { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before { animation: none !important; transition: none !important; }
+}

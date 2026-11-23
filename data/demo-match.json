@@ -1,0 +1,3024 @@
+{
+ "competition": "Ukázková liga",
+ "date": "2026-11-21",
+ "venue": "Sportovní hala Ukázka",
+ "home": {
+  "name": "FBK Modří Draci",
+  "short_name": "Draci"
+ },
+ "away": {
+  "name": "SK Zelení Vlci",
+  "short_name": "Vlci"
+ },
+ "periods": {
+  "count": 3,
+  "length_min": 20,
+  "overtime_min": 5
+ },
+ "score": {
+  "home": 6,
+  "away": 2,
+  "overtime": false
+ },
+ "roster": {
+  "home": [
+   {
+    "jersey": 4,
+    "first_name": "Šimon",
+    "last_name": "Okoun",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 13,
+    "first_name": "Teodor",
+    "last_name": "Borůvka",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 14,
+    "first_name": "Emil",
+    "last_name": "Ježek",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 22,
+    "first_name": "Vít",
+    "last_name": "Javor",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 27,
+    "first_name": "Zdeněk",
+    "last_name": "Kavka",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 28,
+    "first_name": "Zbyněk",
+    "last_name": "Cibulka",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 29,
+    "first_name": "Dalibor",
+    "last_name": "Hrách",
+    "position": "D",
+    "captain": true
+   },
+   {
+    "jersey": 38,
+    "first_name": "Oldřich",
+    "last_name": "Kos",
+    "position": "G",
+    "captain": false
+   },
+   {
+    "jersey": 41,
+    "first_name": "Vilém",
+    "last_name": "Vrána",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 42,
+    "first_name": "Emil",
+    "last_name": "Borůvka",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 52,
+    "first_name": "Adam",
+    "last_name": "Hrách",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 61,
+    "first_name": "Filip",
+    "last_name": "Datel",
+    "position": "G",
+    "captain": false
+   },
+   {
+    "jersey": 71,
+    "first_name": "Zbyněk",
+    "last_name": "Malina",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 79,
+    "first_name": "Kryštof",
+    "last_name": "Liška",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 86,
+    "first_name": "Matyáš",
+    "last_name": "Topol",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 89,
+    "first_name": "Emil",
+    "last_name": "Sýkora",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 90,
+    "first_name": "Vilém",
+    "last_name": "Hrách",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 92,
+    "first_name": "Tadeáš",
+    "last_name": "Pstruh",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 98,
+    "first_name": "Luboš",
+    "last_name": "Kapr",
+    "position": "F",
+    "captain": false
+   }
+  ],
+  "away": [
+   {
+    "jersey": 17,
+    "first_name": "Oldřich",
+    "last_name": "Datel",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 27,
+    "first_name": "Robin",
+    "last_name": "Ježek",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 30,
+    "first_name": "Adam",
+    "last_name": "Pstruh",
+    "position": "F",
+    "captain": true
+   },
+   {
+    "jersey": 34,
+    "first_name": "Matyáš",
+    "last_name": "Kalina",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 39,
+    "first_name": "Otakar",
+    "last_name": "Liška",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 43,
+    "first_name": "Samuel",
+    "last_name": "Kmín",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 45,
+    "first_name": "Matyáš",
+    "last_name": "Vrána",
+    "position": "G",
+    "captain": false
+   },
+   {
+    "jersey": 49,
+    "first_name": "Zbyněk",
+    "last_name": "Okoun",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 50,
+    "first_name": "Vilém",
+    "last_name": "Drozd",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 51,
+    "first_name": "Radim",
+    "last_name": "Ježek",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 69,
+    "first_name": "Otakar",
+    "last_name": "Žito",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 70,
+    "first_name": "Dalibor",
+    "last_name": "Pstruh",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 71,
+    "first_name": "Ctibor",
+    "last_name": "Hruška",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 77,
+    "first_name": "Kamil",
+    "last_name": "Vydra",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 79,
+    "first_name": "Vít",
+    "last_name": "Kapr",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 83,
+    "first_name": "Luboš",
+    "last_name": "Habr",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 89,
+    "first_name": "Vojtěch",
+    "last_name": "Okoun",
+    "position": "G",
+    "captain": false
+   }
+  ]
+ },
+ "formations": {
+  "home": [
+   {
+    "line": 1,
+    "lw": 86,
+    "c": 92,
+    "rw": 14,
+    "ld": 13,
+    "rd": 29
+   },
+   {
+    "line": 2,
+    "lw": 79,
+    "c": 4,
+    "rw": 42,
+    "ld": 28,
+    "rd": 41
+   },
+   {
+    "line": 3,
+    "lw": 27,
+    "c": 90,
+    "rw": 98,
+    "ld": 89,
+    "rd": 52
+   }
+  ],
+  "away": [
+   {
+    "line": 1,
+    "lw": 34,
+    "c": 17,
+    "rw": 30,
+    "ld": 69,
+    "rd": 43
+   },
+   {
+    "line": 2,
+    "lw": 77,
+    "c": 71,
+    "rw": 39,
+    "ld": 50,
+    "rd": 49
+   },
+   {
+    "line": 3,
+    "lw": 27,
+    "c": 79,
+    "rw": 51,
+    "ld": 83,
+    "rd": 70
+   }
+  ]
+ },
+ "events": [
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "00:00",
+   "players": [
+    34,
+    17,
+    30,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "00:00",
+   "players": [
+    86,
+    92,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "00:51",
+   "x": 709,
+   "y": 340,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 86,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "00:55",
+   "x": 772,
+   "y": 296,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 13,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "01:00",
+   "players": [
+    77,
+    71,
+    39,
+    50,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "01:03",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    41
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "01:25",
+   "x": 692,
+   "y": 260,
+   "result": "on_goal",
+   "strength": "power_play",
+   "shooter": 14,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "01:52",
+   "x": 656,
+   "y": 361,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 79,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "01:57",
+   "players": [
+    27,
+    79,
+    51,
+    83,
+    70
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "02:00",
+   "players": [
+    27,
+    90,
+    98,
+    89,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "02:57",
+   "players": [
+    86,
+    92,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "02:59",
+   "players": [
+    34,
+    17,
+    30,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 1,
+   "time": "03:38",
+   "x": 224,
+   "y": 174,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 17,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "03:40",
+   "players": [
+    77,
+    71,
+    39,
+    50,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "03:40",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    41
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "04:34",
+   "players": [
+    27,
+    79,
+    51,
+    83,
+    70
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "04:34",
+   "players": [
+    27,
+    90,
+    98,
+    89,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "05:32",
+   "players": [
+    86,
+    92,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "05:33",
+   "players": [
+    34,
+    17,
+    30,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "06:32",
+   "players": [
+    77,
+    71,
+    39,
+    50,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "06:32",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    41
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "07:41",
+   "players": [
+    27,
+    90,
+    98,
+    89,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "07:42",
+   "players": [
+    27,
+    79,
+    51,
+    83,
+    70
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "07:58",
+   "x": 578,
+   "y": 255,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 52,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "08:08",
+   "players": [
+    34,
+    17,
+    30,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "08:38",
+   "players": [
+    86,
+    92,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "09:28",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    41
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "09:38",
+   "players": [
+    77,
+    71,
+    39,
+    50,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "09:55",
+   "x": 739,
+   "y": 331,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 41,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "10:21",
+   "players": [
+    27,
+    79,
+    51,
+    83,
+    70
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "10:21",
+   "players": [
+    27,
+    90,
+    98,
+    89,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "10:21",
+   "x": 760,
+   "y": 332,
+   "result": "goal",
+   "strength": "even",
+   "shooter": 28,
+   "goalkeeper": 89,
+   "assist": 41
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 1,
+   "time": "11:35",
+   "x": 156,
+   "y": 276,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 27,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "11:39",
+   "players": [
+    34,
+    17,
+    30,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "11:39",
+   "players": [
+    86,
+    92,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "12:32",
+   "players": [
+    77,
+    71,
+    39,
+    50,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "12:32",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    41
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "13:16",
+   "players": [
+    27,
+    79,
+    51,
+    83,
+    70
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "13:16",
+   "players": [
+    27,
+    90,
+    98,
+    89,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "14:14",
+   "players": [
+    34,
+    17,
+    30,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "14:14",
+   "players": [
+    86,
+    92,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "14:14",
+   "x": 718,
+   "y": 272,
+   "result": "goal",
+   "strength": "even",
+   "shooter": 98,
+   "goalkeeper": 89,
+   "assist": 27
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 1,
+   "time": "14:58",
+   "x": 211,
+   "y": 245,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 51,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "15:00",
+   "players": [
+    77,
+    71,
+    39,
+    50,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "15:00",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    41
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "15:48",
+   "x": 763,
+   "y": 247,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 42,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "15:51",
+   "players": [
+    27,
+    79,
+    51,
+    83,
+    70
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "15:51",
+   "players": [
+    27,
+    90,
+    98,
+    89,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 1,
+   "time": "16:57",
+   "x": 186,
+   "y": 147,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 27,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 1,
+   "time": "16:59",
+   "x": 118,
+   "y": 300,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 51,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "17:12",
+   "players": [
+    86,
+    92,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "17:13",
+   "players": [
+    34,
+    17,
+    30,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 1,
+   "time": "17:35",
+   "x": 223,
+   "y": 113,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 17,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "17:45",
+   "x": 711,
+   "y": 242,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 14,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "18:07",
+   "x": 698,
+   "y": 298,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 42,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 1,
+   "time": "18:27",
+   "x": 303,
+   "y": 48,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 17,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "18:45",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    41
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "18:48",
+   "players": [
+    77,
+    71,
+    39,
+    50,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 1,
+   "time": "19:08",
+   "x": 307,
+   "y": 410,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 77,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 1,
+   "time": "19:14",
+   "players": [
+    4,
+    42,
+    86,
+    14,
+    29
+   ],
+   "strength": "power_play",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 1,
+   "time": "19:14",
+   "players": [
+    27,
+    71,
+    51,
+    70
+   ],
+   "strength": "short_handed",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "19:55",
+   "x": 707,
+   "y": 379,
+   "result": "on_goal",
+   "strength": "power_play",
+   "shooter": 86,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 1,
+   "time": "19:58",
+   "x": 773,
+   "y": 270,
+   "result": "on_goal",
+   "strength": "power_play",
+   "shooter": 4,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "00:00",
+   "players": [
+    4,
+    42,
+    92,
+    14,
+    29
+   ],
+   "strength": "power_play",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "00:00",
+   "players": [
+    43,
+    30,
+    69,
+    17
+   ],
+   "strength": "short_handed",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 2,
+   "time": "00:35",
+   "x": 760,
+   "y": 159,
+   "result": "on_goal",
+   "strength": "power_play",
+   "shooter": 42,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 2,
+   "time": "00:48",
+   "x": 714,
+   "y": 174,
+   "result": "on_goal",
+   "strength": "power_play",
+   "shooter": 42,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "00:58",
+   "players": [
+    70,
+    71,
+    51,
+    83
+   ],
+   "strength": "short_handed",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "01:11",
+   "players": [
+    86,
+    4,
+    42,
+    14,
+    29
+   ],
+   "strength": "power_play",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "01:14",
+   "players": [
+    70,
+    71,
+    51,
+    83,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "01:43",
+   "players": [
+    27,
+    90,
+    98,
+    89,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "02:45",
+   "players": [
+    34,
+    17,
+    30,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "02:50",
+   "players": [
+    86,
+    92,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "04:21",
+   "players": [
+    86,
+    92,
+    4,
+    42,
+    29
+   ],
+   "strength": "power_play",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "04:21",
+   "players": [
+    70,
+    27,
+    71,
+    51
+   ],
+   "strength": "short_handed",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "05:04",
+   "players": [
+    30,
+    69,
+    17,
+    49
+   ],
+   "strength": "short_handed",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "05:41",
+   "players": [
+    27,
+    51,
+    71,
+    70
+   ],
+   "strength": "short_handed",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "05:41",
+   "players": [
+    28,
+    90,
+    79,
+    13,
+    98
+   ],
+   "strength": "power_play",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "05:55",
+   "players": [
+    86,
+    29,
+    14,
+    4,
+    42
+   ],
+   "strength": "power_play",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 2,
+   "time": "06:04",
+   "x": 773,
+   "y": 188,
+   "result": "on_goal",
+   "strength": "power_play",
+   "shooter": 42,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "06:21",
+   "players": [
+    34,
+    17,
+    30,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "06:21",
+   "players": [
+    27,
+    90,
+    98,
+    89,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 2,
+   "time": "06:21",
+   "x": 743,
+   "y": 233,
+   "result": "goal",
+   "strength": "power_play",
+   "shooter": 42,
+   "goalkeeper": 89,
+   "assist": 14
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "06:39",
+   "players": [
+    77,
+    71,
+    39,
+    50,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "06:39",
+   "players": [
+    86,
+    92,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 2,
+   "time": "06:39",
+   "x": 149,
+   "y": 265,
+   "result": "goal",
+   "strength": "even",
+   "shooter": 34,
+   "goalkeeper": 61,
+   "assist": 50
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "08:20",
+   "players": [
+    27,
+    79,
+    51,
+    83,
+    70
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "08:23",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    41
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 2,
+   "time": "09:07",
+   "x": 695,
+   "y": 212,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 4,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "09:31",
+   "players": [
+    77,
+    71,
+    39,
+    50,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "09:31",
+   "players": [
+    27,
+    90,
+    98,
+    89,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "10:22",
+   "players": [
+    86,
+    92,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "10:22",
+   "players": [
+    34,
+    17,
+    30,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 2,
+   "time": "11:05",
+   "x": 694,
+   "y": 256,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 13,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "11:14",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    41
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "11:46",
+   "players": [
+    79,
+    49,
+    51,
+    50,
+    70
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 2,
+   "time": "12:28",
+   "x": 714,
+   "y": 251,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 79,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 2,
+   "time": "12:43",
+   "x": 279,
+   "y": 244,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 70,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "13:01",
+   "players": [
+    27,
+    71,
+    39,
+    43,
+    69
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "13:08",
+   "players": [
+    27,
+    90,
+    98,
+    89,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "14:20",
+   "players": [
+    86,
+    92,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "14:20",
+   "players": [
+    34,
+    30,
+    50,
+    17,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 2,
+   "time": "14:40",
+   "x": 638,
+   "y": 394,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 92,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 2,
+   "time": "14:54",
+   "x": 307,
+   "y": 338,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 17,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "14:58",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    41
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "14:58",
+   "players": [
+    51,
+    79,
+    70,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 2,
+   "time": "15:18",
+   "x": 130,
+   "y": 301,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 79,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 2,
+   "time": "15:22",
+   "x": 741,
+   "y": 318,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 79,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "15:51",
+   "players": [
+    27,
+    50,
+    71,
+    49,
+    39
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 2,
+   "time": "15:53",
+   "x": 753,
+   "y": 202,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 41,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "15:55",
+   "players": [
+    86,
+    92,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "17:02",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    41
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "17:02",
+   "players": [
+    43,
+    69,
+    34,
+    30,
+    17
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 2,
+   "time": "17:37",
+   "x": 257,
+   "y": 394,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 17,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "18:17",
+   "players": [
+    86,
+    90,
+    14,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "18:17",
+   "players": [
+    79,
+    70,
+    51,
+    49,
+    50
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 2,
+   "time": "18:17",
+   "x": 182,
+   "y": 220,
+   "result": "goal",
+   "strength": "even",
+   "shooter": 51,
+   "goalkeeper": 61,
+   "assist": 17
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 2,
+   "time": "19:14",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    41
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 2,
+   "time": "19:14",
+   "players": [
+    69,
+    27,
+    43,
+    39,
+    71
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 2,
+   "time": "19:52",
+   "x": 749,
+   "y": 270,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 4,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "00:00",
+   "players": [
+    34,
+    17,
+    30,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "00:00",
+   "players": [
+    86,
+    90,
+    98,
+    29,
+    13
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "00:46",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "00:46",
+   "players": [
+    27,
+    71,
+    39,
+    50,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "01:39",
+   "players": [
+    79,
+    70,
+    43,
+    69,
+    51
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "01:40",
+   "players": [
+    86,
+    90,
+    98,
+    29,
+    13
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "02:01",
+   "x": 726,
+   "y": 230,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 29,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "02:22",
+   "x": 755,
+   "y": 208,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 98,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "02:42",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "02:43",
+   "players": [
+    49,
+    50,
+    17,
+    30,
+    34
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "03:38",
+   "players": [
+    86,
+    90,
+    98,
+    29,
+    13
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "03:38",
+   "players": [
+    71,
+    39,
+    43,
+    27,
+    69
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 3,
+   "time": "04:21",
+   "x": 249,
+   "y": 223,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 39,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "04:45",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "04:45",
+   "players": [
+    70,
+    51,
+    50,
+    49,
+    79
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "05:33",
+   "players": [
+    86,
+    90,
+    98,
+    29,
+    13
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "05:33",
+   "players": [
+    17,
+    30,
+    34,
+    69,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "05:55",
+   "x": 705,
+   "y": 149,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 90,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "05:59",
+   "x": 667,
+   "y": 329,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 29,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "06:23",
+   "players": [
+    71,
+    39,
+    27,
+    50,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "06:25",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "07:21",
+   "players": [
+    43,
+    51,
+    70,
+    69,
+    79
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "07:35",
+   "players": [
+    86,
+    90,
+    98,
+    29,
+    13
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "07:45",
+   "x": 643,
+   "y": 234,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 90,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "08:08",
+   "x": 653,
+   "y": 194,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 29,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "08:22",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "08:25",
+   "players": [
+    30,
+    34,
+    17,
+    50,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "09:08",
+   "players": [
+    86,
+    90,
+    98,
+    29,
+    13
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "09:08",
+   "players": [
+    39,
+    43,
+    71,
+    69,
+    27
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "09:08",
+   "x": 725,
+   "y": 195,
+   "result": "goal",
+   "strength": "even",
+   "shooter": 4,
+   "goalkeeper": 89,
+   "assist": 79
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "10:11",
+   "players": [
+    79,
+    4,
+    42,
+    28,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "10:11",
+   "players": [
+    50,
+    70,
+    49,
+    51,
+    79
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "10:42",
+   "x": 725,
+   "y": 271,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 52,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "11:18",
+   "players": [
+    69,
+    30,
+    17,
+    49
+   ],
+   "strength": "short_handed",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "11:18",
+   "players": [
+    14,
+    4,
+    42,
+    86,
+    29
+   ],
+   "strength": "power_play",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "11:39",
+   "x": 724,
+   "y": 251,
+   "result": "on_goal",
+   "strength": "power_play",
+   "shooter": 42,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "11:57",
+   "x": 767,
+   "y": 268,
+   "result": "on_goal",
+   "strength": "power_play",
+   "shooter": 42,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "12:13",
+   "players": [
+    70,
+    71,
+    27,
+    39
+   ],
+   "strength": "short_handed",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "12:13",
+   "players": [
+    4,
+    42,
+    86,
+    28,
+    13
+   ],
+   "strength": "power_play",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "12:32",
+   "players": [
+    14,
+    4,
+    42,
+    86,
+    29
+   ],
+   "strength": "power_play",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "12:42",
+   "x": 791,
+   "y": 216,
+   "result": "on_goal",
+   "strength": "power_play",
+   "shooter": 42,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "13:05",
+   "x": 784,
+   "y": 240,
+   "result": "on_goal",
+   "strength": "power_play",
+   "shooter": 4,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "13:18",
+   "players": [
+    70,
+    71,
+    27,
+    39,
+    51
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "13:23",
+   "players": [
+    30,
+    17,
+    69,
+    34,
+    43
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "13:26",
+   "players": [
+    89,
+    52,
+    90,
+    28,
+    98
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "14:11",
+   "players": [
+    79,
+    4,
+    42,
+    29,
+    13
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "14:11",
+   "players": [
+    39,
+    27,
+    49,
+    71,
+    70
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "15:01",
+   "players": [
+    86,
+    90,
+    98,
+    52,
+    28
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "15:30",
+   "players": [
+    39,
+    27,
+    49,
+    71,
+    70,
+    69
+   ],
+   "strength": "even",
+   "empty_net": true
+  },
+  {
+   "type": "shot",
+   "team": "away",
+   "period": 3,
+   "time": "15:33",
+   "x": 208,
+   "y": 267,
+   "result": "on_goal",
+   "strength": "even",
+   "shooter": 17,
+   "goalkeeper": 61,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "15:42",
+   "players": [
+    27,
+    51,
+    30,
+    70,
+    49
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "15:48",
+   "players": [
+    86,
+    4,
+    42,
+    29,
+    13
+   ],
+   "strength": "power_play",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "15:48",
+   "players": [
+    30,
+    49,
+    17,
+    69
+   ],
+   "strength": "short_handed",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "16:27",
+   "x": 786,
+   "y": 182,
+   "result": "on_goal",
+   "strength": "power_play",
+   "shooter": 4,
+   "goalkeeper": 89,
+   "assist": null
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "16:45",
+   "players": [
+    79,
+    98,
+    52,
+    28,
+    90
+   ],
+   "strength": "power_play",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "16:45",
+   "players": [
+    39,
+    27,
+    70,
+    71
+   ],
+   "strength": "short_handed",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "16:59",
+   "players": [
+    86,
+    4,
+    42,
+    13,
+    29
+   ],
+   "strength": "power_play",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "17:42",
+   "players": [
+    30,
+    49,
+    70,
+    27,
+    51
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "17:42",
+   "players": [
+    79,
+    90,
+    98,
+    28,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "17:42",
+   "x": 698,
+   "y": 269,
+   "result": "goal",
+   "strength": "power_play",
+   "shooter": 29,
+   "goalkeeper": 89,
+   "assist": 86
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "18:19",
+   "players": [
+    86,
+    4,
+    42,
+    13,
+    29
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "18:19",
+   "players": [
+    69,
+    71,
+    17,
+    34,
+    39
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "18:40",
+   "players": [
+    69,
+    71,
+    17,
+    34,
+    39,
+    43
+   ],
+   "strength": "even",
+   "empty_net": true
+  },
+  {
+   "type": "substitution",
+   "team": "home",
+   "period": 3,
+   "time": "19:02",
+   "players": [
+    79,
+    90,
+    98,
+    28,
+    52
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "19:02",
+   "players": [
+    51,
+    49,
+    30,
+    27,
+    70
+   ],
+   "strength": "even",
+   "empty_net": false
+  },
+  {
+   "type": "shot",
+   "team": "home",
+   "period": 3,
+   "time": "19:02",
+   "x": 618,
+   "y": 253,
+   "result": "goal",
+   "strength": "even",
+   "shooter": 4,
+   "goalkeeper": null,
+   "assist": 86
+  },
+  {
+   "type": "substitution",
+   "team": "away",
+   "period": 3,
+   "time": "19:46",
+   "players": [
+    30,
+    51,
+    27,
+    69,
+    70
+   ],
+   "strength": "even",
+   "empty_net": false
+  }
+ ]
+}

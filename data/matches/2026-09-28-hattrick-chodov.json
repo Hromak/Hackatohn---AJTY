@@ -1,0 +1,308 @@
+{
+ "competition": "Livesport Superliga",
+ "date": "2026-09-28",
+ "venue": "STAREZ ARÉNA VODOVA Hala 2",
+ "home": {
+  "name": "FBŠ Hummel Hattrick Brno",
+  "short_name": "Hattrick"
+ },
+ "away": {
+  "name": "FAT PIPE FLORBAL CHODOV",
+  "short_name": "Chodov"
+ },
+ "periods": {
+  "count": 3,
+  "length_min": 20,
+  "overtime_min": 5
+ },
+ "roster": {
+  "home": [
+   {
+    "jersey": 3,
+    "first_name": "Jan",
+    "last_name": "Ždímal",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 4,
+    "first_name": "Damián",
+    "last_name": "Oujeský",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 5,
+    "first_name": "Jonáš",
+    "last_name": "Oujeský",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 7,
+    "first_name": "Jakub",
+    "last_name": "Procházka",
+    "position": "F",
+    "captain": true
+   },
+   {
+    "jersey": 10,
+    "first_name": "Matěj",
+    "last_name": "Klímek",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 11,
+    "first_name": "Adam",
+    "last_name": "Klusoň",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 17,
+    "first_name": "David",
+    "last_name": "Vodica",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 21,
+    "first_name": "Kryštof",
+    "last_name": "Milichovský",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 22,
+    "first_name": "Jakub",
+    "last_name": "Tesárek",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 34,
+    "first_name": "Šimon",
+    "last_name": "Ruber",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 50,
+    "first_name": "Adam",
+    "last_name": "Tůma",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 55,
+    "first_name": "Alex",
+    "last_name": "Dokládal",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 66,
+    "first_name": "Matěj",
+    "last_name": "Bednář",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 77,
+    "first_name": "Matyáš",
+    "last_name": "Gryc",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 81,
+    "first_name": "Josef",
+    "last_name": "Loučka",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 85,
+    "first_name": "Juda",
+    "last_name": "Otradovec",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 92,
+    "first_name": "Jonáš",
+    "last_name": "Kůra",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 95,
+    "first_name": "Jakub",
+    "last_name": "Pechura",
+    "position": "G",
+    "captain": false
+   },
+   {
+    "jersey": 96,
+    "first_name": "René",
+    "last_name": "Slezák",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 97,
+    "first_name": "Miroslav",
+    "last_name": "Steiger",
+    "position": "G",
+    "captain": false
+   }
+  ],
+  "away": [
+   {
+    "jersey": 8,
+    "first_name": "Marek",
+    "last_name": "Šmíd",
+    "position": "D",
+    "captain": true
+   },
+   {
+    "jersey": 13,
+    "first_name": "David",
+    "last_name": "Špaček",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 17,
+    "first_name": "Vojtěch",
+    "last_name": "Kún",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 21,
+    "first_name": "Marek",
+    "last_name": "Vávra",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 22,
+    "first_name": "Bartoloměj",
+    "last_name": "Smolka",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 24,
+    "first_name": "Tadeáš",
+    "last_name": "Dittrich",
+    "position": "G",
+    "captain": false
+   },
+   {
+    "jersey": 25,
+    "first_name": "Matěj",
+    "last_name": "Bezpalec",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 30,
+    "first_name": "Marek",
+    "last_name": "Trupl",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 34,
+    "first_name": "Elliot",
+    "last_name": "Festa",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 35,
+    "first_name": "Marek",
+    "last_name": "Matoušek",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 40,
+    "first_name": "Daniel",
+    "last_name": "Műck",
+    "position": "G",
+    "captain": false
+   },
+   {
+    "jersey": 41,
+    "first_name": "Matěj",
+    "last_name": "Pěnička",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 42,
+    "first_name": "Lukáš",
+    "last_name": "Bulíř",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 51,
+    "first_name": "Vítek",
+    "last_name": "Engel",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 81,
+    "first_name": "Bohumil",
+    "last_name": "Piskáček",
+    "position": "D",
+    "captain": false
+   },
+   {
+    "jersey": 82,
+    "first_name": "Vojtěch",
+    "last_name": "Petráň",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 83,
+    "first_name": "Antonín",
+    "last_name": "Votava",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 86,
+    "first_name": "Filip",
+    "last_name": "Šimek",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 89,
+    "first_name": "Matěj",
+    "last_name": "Kulhavý",
+    "position": "F",
+    "captain": false
+   },
+   {
+    "jersey": 93,
+    "first_name": "Alex",
+    "last_name": "Kubala",
+    "position": "F",
+    "captain": false
+   }
+  ]
+ },
+ "formations": {
+  "home": [],
+  "away": []
+ }
+}

@@ -1,0 +1,44 @@
+{
+  "team": {
+    "id": 1,
+    "name": "Demo"
+  },
+  "matches": [
+    {
+      "id": 1,
+      "home": "FBK Modří Draci",
+      "away": "SK Zelení Vlci",
+      "date": "2026-11-21"
+    },
+    {
+      "id": 2,
+      "home": "FAT PIPE FLORBAL CHODOV",
+      "away": "FBC ČPP MPL STAVEBNINY OSTRAVA",
+      "date": "2026-09-26"
+    },
+    {
+      "id": 3,
+      "home": "1. SC TEMPISH Vítkovice",
+      "away": "FBŠ Hummel Hattrick Brno",
+      "date": "2026-09-26"
+    },
+    {
+      "id": 4,
+      "home": "FBC ČLT Česká Lípa",
+      "away": "ACEMA Sparta Praha",
+      "date": "2026-09-28"
+    },
+    {
+      "id": 5,
+      "home": "FBŠ Hummel Hattrick Brno",
+      "away": "FAT PIPE FLORBAL CHODOV",
+      "date": "2026-09-28"
+    },
+    {
+      "id": 6,
+      "home": "Florbal Ústí",
+      "away": "Bulldogs Brno",
+      "date": "2026-09-28"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "event": {
+    "client_id": "f144af60-b791-5be6-a19a-1cb0c1a60056",
+    "type": "substitution",
+    "team": "away",
+    "period": 1,
+    "time": "01:00",
+    "players": [
+      33,
+      32,
+      24,
+      28,
+      27
+    ],
+    "strength": "even",
+    "empty_net": false,
+    "in": [
+      33,
+      32,
+      24,
+      28,
+      27
+    ],
+    "out": [
+      23,
+      20,
+      22,
+      30,
+      25
+    ],
+    "version": 1,
+    "seq": 2,
+    "created_at": "2026-11-21T09:00:00Z",
+    "updated_at": "2026-11-21T09:00:00Z",
+    "warnings": []
+  },
+  "created": true,
+  "unchanged": false
+}

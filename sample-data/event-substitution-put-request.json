@@ -1,0 +1,15 @@
+{
+  "type": "substitution",
+  "team": "away",
+  "period": 1,
+  "time": "01:00",
+  "players": [
+    33,
+    32,
+    24,
+    28,
+    27
+  ],
+  "strength": "even",
+  "empty_net": false
+}

@@ -1,0 +1,9 @@
+{
+  "error": {
+    "code": "unknown_player",
+    "message": "Hráč 999999 není na soupisce tohoto utkání.",
+    "fields": {
+      "shooter_id": "unknown_player"
+    }
+  }
+}

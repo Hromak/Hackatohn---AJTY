@@ -1,0 +1,294 @@
+{
+  "home": [
+    {
+      "id": 1,
+      "jersey": 4,
+      "first_name": "Šimon",
+      "last_name": "Okoun",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 2,
+      "jersey": 13,
+      "first_name": "Teodor",
+      "last_name": "Borůvka",
+      "position": "D",
+      "captain": false
+    },
+    {
+      "id": 3,
+      "jersey": 14,
+      "first_name": "Emil",
+      "last_name": "Ježek",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 4,
+      "jersey": 22,
+      "first_name": "Vít",
+      "last_name": "Javor",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 5,
+      "jersey": 27,
+      "first_name": "Zdeněk",
+      "last_name": "Kavka",
+      "position": "D",
+      "captain": false
+    },
+    {
+      "id": 6,
+      "jersey": 28,
+      "first_name": "Zbyněk",
+      "last_name": "Cibulka",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 7,
+      "jersey": 29,
+      "first_name": "Dalibor",
+      "last_name": "Hrách",
+      "position": "D",
+      "captain": true
+    },
+    {
+      "id": 8,
+      "jersey": 38,
+      "first_name": "Oldřich",
+      "last_name": "Kos",
+      "position": "G",
+      "captain": false
+    },
+    {
+      "id": 9,
+      "jersey": 41,
+      "first_name": "Vilém",
+      "last_name": "Vrána",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 10,
+      "jersey": 42,
+      "first_name": "Emil",
+      "last_name": "Borůvka",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 11,
+      "jersey": 52,
+      "first_name": "Adam",
+      "last_name": "Hrách",
+      "position": "D",
+      "captain": false
+    },
+    {
+      "id": 12,
+      "jersey": 61,
+      "first_name": "Filip",
+      "last_name": "Datel",
+      "position": "G",
+      "captain": false
+    },
+    {
+      "id": 13,
+      "jersey": 71,
+      "first_name": "Zbyněk",
+      "last_name": "Malina",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 14,
+      "jersey": 79,
+      "first_name": "Kryštof",
+      "last_name": "Liška",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 15,
+      "jersey": 86,
+      "first_name": "Matyáš",
+      "last_name": "Topol",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 16,
+      "jersey": 89,
+      "first_name": "Emil",
+      "last_name": "Sýkora",
+      "position": "D",
+      "captain": false
+    },
+    {
+      "id": 17,
+      "jersey": 90,
+      "first_name": "Vilém",
+      "last_name": "Hrách",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 18,
+      "jersey": 92,
+      "first_name": "Tadeáš",
+      "last_name": "Pstruh",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 19,
+      "jersey": 98,
+      "first_name": "Luboš",
+      "last_name": "Kapr",
+      "position": "F",
+      "captain": false
+    }
+  ],
+  "away": [
+    {
+      "id": 20,
+      "jersey": 17,
+      "first_name": "Oldřich",
+      "last_name": "Datel",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 21,
+      "jersey": 27,
+      "first_name": "Robin",
+      "last_name": "Ježek",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 22,
+      "jersey": 30,
+      "first_name": "Adam",
+      "last_name": "Pstruh",
+      "position": "F",
+      "captain": true
+    },
+    {
+      "id": 23,
+      "jersey": 34,
+      "first_name": "Matyáš",
+      "last_name": "Kalina",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 24,
+      "jersey": 39,
+      "first_name": "Otakar",
+      "last_name": "Liška",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 25,
+      "jersey": 43,
+      "first_name": "Samuel",
+      "last_name": "Kmín",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 26,
+      "jersey": 45,
+      "first_name": "Matyáš",
+      "last_name": "Vrána",
+      "position": "G",
+      "captain": false
+    },
+    {
+      "id": 27,
+      "jersey": 49,
+      "first_name": "Zbyněk",
+      "last_name": "Okoun",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 28,
+      "jersey": 50,
+      "first_name": "Vilém",
+      "last_name": "Drozd",
+      "position": "D",
+      "captain": false
+    },
+    {
+      "id": 29,
+      "jersey": 51,
+      "first_name": "Radim",
+      "last_name": "Ježek",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 30,
+      "jersey": 69,
+      "first_name": "Otakar",
+      "last_name": "Žito",
+      "position": "D",
+      "captain": false
+    },
+    {
+      "id": 31,
+      "jersey": 70,
+      "first_name": "Dalibor",
+      "last_name": "Pstruh",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 32,
+      "jersey": 71,
+      "first_name": "Ctibor",
+      "last_name": "Hruška",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 33,
+      "jersey": 77,
+      "first_name": "Kamil",
+      "last_name": "Vydra",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 34,
+      "jersey": 79,
+      "first_name": "Vít",
+      "last_name": "Kapr",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 35,
+      "jersey": 83,
+      "first_name": "Luboš",
+      "last_name": "Habr",
+      "position": "F",
+      "captain": false
+    },
+    {
+      "id": 36,
+      "jersey": 89,
+      "first_name": "Vojtěch",
+      "last_name": "Okoun",
+      "position": "G",
+      "captain": false
+    }
+  ]
+}
